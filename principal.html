@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="./principal.js" ></script>
+    <link rel="stylesheet" href="principal.css">
+    <title>League of Nexus</title>
+</head>
+<body>
+    <header>
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img  id='logo' src="./logo.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Campeones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Noticias</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Ashe" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <section>
+          <div id="contenedor">      
+            <div class="slider">
+                <div><img src="carrusel1.png"alt=""></div>
+                <div><img src="carrusel2.png" alt=""></div>
+                <div><img src="carrusel3.png" alt=""></div>
+            </div>
+            <div id="btn-prev">&#60</div>
+            <div id="btn-next">&#62</div>
+        </div>
+        </section>
+        <section>
+          <h1>Elige tu camino</h1>
+          <div class="seccion2 container">
+            <div class="row justify-content-between">
+              <h2 class="col-6">CLASE:TIRADOR</h2>
+              <img id='icono' class='col-6'src="./iconos/tirador.png" alt="">
+            </div>
+            <div class="row justify-content-evenly">
+              <div class="col-6" id="video">
+                <video width="500" height="500" class='mx-auto' autoplay muted loop >
+                  <source src="./videos campeones/ashe.mp4" type="video/mp4">
+                </video>
+              </div>
+              <p id="descripcion" class="col-6">los Tiradores son campeones a distancia cuyo poder gira casi exclusivamente en torno a sus ataques básicos: utilizando su alcance para causar daños continuos masivos desde la distancia, los tiradores son capaces de derribar incluso al más duro de los oponentes cuando se coloca detrás de la seguridad de su equipo, y sobresalen en asegurar los objetivos del mapa, como el Dragon Dragon, el Baron Nashor Baron Nashor y las torretas.
+                Los Tiradores son tremendamente vulnerables al daño de estallido debido a su blandura, y tienden a ser excepcionalmente débiles al principio del juego, requiriendo grandes cantidades de oro, principalmente a través de muertes de súbditos para adquirir artículos poderosos, pero caros, centrados en el daño. Debido a su potente alcance y daño sostenido, los tiradores son particularmente fuertes contra los oponentes más duraderos, es decir, los luchadores y los tanques, pero caen rápidamente al daño de los aniquiladores y magos.
+              </p>
+            </div>
+          </div>
+        </section>
+    </main>
+  <div class="container my-5">
+    <footer class="text-center text-white bg-dark" >
+      <div class="container">
+        <section class="mt-5">
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Products</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Awards</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Help</a>
+              </h6>
+            </div>
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Contact</a>
+              </h6>
+            </div>
+          </div>
+        </section>
+        <hr class="my-5" />
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti
+                dicta, aliquam sequi voluptate quas.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-github"></i>
+          </a>
+        </section>
+      </div>
+      <div class="text-center p-3"style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/"
+          >MDBootstrap.com</a>
+      </div>
+    </footer>
+  </div>
+    
+</body>
+</html>
