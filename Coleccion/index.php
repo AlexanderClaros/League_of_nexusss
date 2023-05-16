@@ -8,7 +8,7 @@
     <head>
         <meta charset="UTF-8">
         <title>League of Nexus</title>
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./css/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     </head>
     <body>
@@ -19,6 +19,6 @@
             <div class="filter"></div>
             <div class="listCollection"></div>
         </div>
-        <script type="module" src="./index.js"></script>
+        <script type="module" src="./js/index.js"></script>
     </body>
 </html>

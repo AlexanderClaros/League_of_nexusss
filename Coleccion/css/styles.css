@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.letterTitle {
+    
+}
+.letterContent {
+
+}
+.header {
+    overflow: auto;
+    background-image: linear-gradient(to right, #131313, #292929);
+    border-bottom: 5px solid #C89B3C;
+    height: 10%;
+}
+.header h1 {
+    text-align: center;
+    color: white;
+}
+.mainFrame {
+    border-top: none;
+    padding: 30px;
+    overflow: auto;
+}
+.filter {
+    border-right: 1px solid #5B5A56;
+    float: left;
+    height: 300px;
+    width: 20%;
+}
+.listCollection {
+    float: right;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.champFrame {
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    width: 200px;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
+    transition: clip-path 0.3s;
+}
+.champFrame:hover {
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 0%);
+}
+.champFrame:hover img {
+transform: scale(1);
+}
+.champFrame:hover .bannerMasteryChamp {
+    height: 15%;
+}
+.champFrame:hover .pMasteryPoints {
+    opacity: 1;
+}
+.champFrame img {
+    transform: scale(1.10);
+    transition: transform 0.3s;
+    width: 100%;
+    display: block;
+}
+.bannerMasteryChamp {
+    border-top: 1px solid #C89B3C;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 0;
+    width: 100%;
+    bottom: 15%;
+    background-color: #5b5a56df;
+    transition: height 0.3s;
+}
+.pMasteryPoints {
+    opacity: 0;
+    color: white;
+    margin-left: 30px;
+    transition: opacity 0.2s;
+}
+.divMasteryIcon {
+    opacity: 1;
+    width: auto;
+    height: 80%;
+    width: 25%;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.divMasteryIcon img {
+    height: 100%;
+    width: auto;
+}
+.bannerNameChamp {
+    border-top: 1px solid #C89B3C;
+    display: flex; 
+    align-items: center;
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+    background-color: #292929;
+}
+.bannerNameChamp p {
+    margin: 0;
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    max-width: 75%;
+}
