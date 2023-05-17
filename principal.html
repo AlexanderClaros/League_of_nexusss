@@ -12,8 +12,28 @@
     <title>League of Nexus</title>
 </head>
 <body>
+  <!-- Inicio Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Anuncio</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="background-image: url(../League_of_nexus/carrusel3.png);background-attachment: fixed;background-size: cover; background-repeat:no-repeat;  height:280px;">
+          
+          <h1 style="color :white;">5vs5 Tournament</h1>
+          
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark">inscribirse</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Fin Modal -->
     <header>
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"><img  id='logo' src="./logo.png" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -168,75 +188,67 @@
             </div>
           </div>
         </section>
+        <section>
+          <div class="chat-header">
+              <h2>Comunidad</h2>
+          </div>
+          <div class="chat-container">
+            <div class="chat-history"  id="chat-history">
+                <!-- Aquí van los mensajes del chat -->
+            </div>
+            <div class="chat-input">
+                <form onsubmit="enviarMensaje(event);">
+                    <input id="mensaje" type="text" placeholder="Escribe tu mensaje aquí">
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+          </div>
+        </section>
     </main>
-  <div class="container my-5">
+  <div class="container my-5" id="footer">
     <footer class="text-center text-white bg-dark" >
       <div class="container">
         <section class="mt-5">
           <div class="row text-center d-flex justify-content-center pt-5">
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">About us</a>
+                <a href="#!" class="text-white">Sobre Nosotros</a>
               </h6>
             </div>
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Products</a>
+                <a href="#!" class="text-white">Campeones</a>
+              </h6>
+            </div>
+            
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Ayuda</a>
               </h6>
             </div>
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Awards</a>
-              </h6>
-            </div>
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Help</a>
-              </h6>
-            </div>
-            <div class="col-md-2">
-              <h6 class="text-uppercase font-weight-bold">
-                <a href="#!" class="text-white">Contact</a>
+                <a href="#!" class="text-white">Contactanos</a>
               </h6>
             </div>
           </div>
-        </section>
-        <hr class="my-5" />
-        <section class="mb-5">
-          <div class="row d-flex justify-content-center">
-            <div class="col-lg-8">
-              <p>
-                League of Nexus fue creado según la política de la ''Sección de parloteo legal'' de Riot Games, utilizando los recursos de Riot Games.  Riot Games no apoya ni patrocina este proyecto.
-              </p>
+          <hr class="my-5" />
+          <section class="mb-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <p>
+                  League of Nexus fue creado según la política de la ''Sección de parloteo legal'' de Riot Games, utilizando los recursos de Riot Games.  Riot Games no apoya ni patrocina este proyecto.
+                </p>
+              </div>
             </div>
-          </div>
-        </section>
-        <section class="text-center mb-5">
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
+            <div class="text-center p-3"style="background-color: rgba(0, 0, 0, 0.2)">
+              © 2023 Copyright:
+              <a class="text-white" href="#">League of Nexus</a>
+            </div>
+          </section>
         </section>
       </div>
-      <div class="text-center p-3"style="background-color: rgba(0, 0, 0, 0.2)">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-          >MDBootstrap.com</a>
-      </div>
+        
     </footer>
   </div>
     
