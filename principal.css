@@ -91,6 +91,8 @@ video{
 #descripcion{
     color: white;
     margin-top: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
 }
 .slider-campeones{
     display: block;
@@ -122,22 +124,22 @@ video{
 
 @keyframes cambio {
 	0% {margin-left: 0;}
-	9% {margin-left: 0;}
+	14% {margin-left: 0;}
 	
-	18% {margin-left: -105%;}
-	27% {margin-left: -105%;}
+	16% {margin-left: -105%;}
+	30% {margin-left: -105%;}
 	
-	36% {margin-left: -205%;}
-	45% {margin-left: -205%;}
+	32% {margin-left: -205%;}
+	46% {margin-left: -205%;}
 	
-	56% {margin-left: -310%;}
-	63% {margin-left: -310%;}
+	48% {margin-left: -310%;}
+	62% {margin-left: -310%;}
 
-    72% {margin-left: -410%;}
-	81% {margin-left: -410%;}
+    64% {margin-left: -410%;}
+	78% {margin-left: -410%;}
 	
-	90% {margin-left: -510%;}
-	100% {margin-left: -510%;}
+	80% {margin-left: -510%;}
+	94% {margin-left: -510%;}
 
 
 }
