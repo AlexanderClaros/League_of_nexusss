@@ -28,10 +28,11 @@
             <h5 class="modal-title" id="exampleModalLabel">Anuncio</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body" style="background-image: url(../League_of_nexus/carrusel3.png);background-attachment: fixed;background-size: cover; background-repeat:no-repeat;  height:280px;">  
+        <div class="modal-body">  
+          <img src="anuncio3.jpg" style="width:470px;" alt="">  
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-outline-dark">inscribirse</button>
+            <a href=""><button type="button" class="btn btn-outline-dark">Pidela ya</button></a>
         </div>
       </div>
     </div>
@@ -206,7 +207,7 @@
           </div>
         </section>
         <div class="container d-flex justify-content-cente" >
-          <a class="mx-auto" href="https://www.dynos.es/"> <img  class="mx-auto"src="anuncio2.png" id="anuncio" alt=""></a>
+          <a class="mx-auto" href="https://www.dynos.es/ofertas"> <img  class="mx-auto"src="anuncio2.png" id="anuncio" alt=""></a>
         </div>
     </main>
   <div class="container my-5" id="footer">
