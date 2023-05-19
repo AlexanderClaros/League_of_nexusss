@@ -23,12 +23,18 @@ setcookie('user','',time()-(60*5));
     <link href="https://fonts.googleapis.com/css2?family=Alef:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./inicio.css">
 
+    <!-- Orbitron -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
     <title>Inicio</title>
     
 </head>
 <body>
-
-    <h2 class="mt-4 card-title">LEAGUE OF NEXUS</h2>
+    <div id="titulo">
+        <img src="logo_inicio.png" alt="">
+        <h2 class="mt-4 card-title">LEAGUE OF NEXUS</h2>
+    </div>
     <div id="prueba">
         <div class=" card bg-dark">
             <form action="get_info.php" method="post" class="card-body">

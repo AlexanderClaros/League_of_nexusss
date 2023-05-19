@@ -5,22 +5,12 @@
     max-height: 650px;
     z-index: 1;
     background-color: rgb(255, 255, 255);
-    margin-top: 9.5%;
+    margin-top: 5.3%;
     font-family: 'Konkhmer Sleokchher', cursive;
     margin-left: 5%;
     border-radius: 3px;
 }
-.card-title{
-    font-family: 'Alef', sans-serif;
-    text-align: center;
-    color:white;
-    font-weight: bold;
-    font-size: 80px;
-    background: -webkit-linear-gradient(rgb(118, 206, 124),rgba(45, 114, 183, 0.785));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;  
-}
+
 body{
     background-image: url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_8.jpg");
     background-repeat: no-repeat;
@@ -76,4 +66,114 @@ a p:hover{
 }
 .card-body{
     padding:20px;
+}
+#titulo{
+    display: flex;
+}
+#titulo h2{
+    font-family: 'Orbitron', sans-serif;
+    text-align: start;
+    color:white;
+    font-weight: bold;
+    font-size: 80px;
+    background: -webkit-linear-gradient(rgb(118, 206, 124),rgba(45, 114, 183, 0.785));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;  
+    width: 450px;
+    
+
+}
+#titulo img{
+    height: 350px;
+}
+@media screen and (max-width:1650px){
+    .card{
+        min-width: 450px;
+        min-height: 650px;
+        max-width: 450px;
+        max-height: 550px;
+        z-index: 1;
+        background-color: rgb(255, 255, 255);
+        margin-top: 1%;
+        font-family: 'Konkhmer Sleokchher', cursive;
+        margin-left: 5%;
+        border-radius: 3px;
+    }
+    
+    body{
+        background-image: url("https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_8.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .card label{
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        background: -webkit-linear-gradient(rgb(118, 206, 124),rgba(45, 114, 183, 0.785));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+     button{
+        margin-left: 35%;       
+        height:60px ;
+        width: 120px;
+        font-size: 20px !important;
+        border-radius: 15px !important;
+    }
+    a{
+        border-radius: 15px !important;
+        margin-top: 30px;
+        margin-left: 20%;
+        height: 60px;
+        width: 250px;
+        font-size: 20px !important;
+        border:1px solid #d13639!important;
+    }
+    a:hover{
+        background-color: #d13639!important;
+    }
+    a p{
+        margin-top: 5%;
+        color: #d13639 !important;
+    }
+    a p:hover{
+    
+        color: white !important;
+    }
+    .form-control{
+
+        background-color: rgb(126,126,126,0.1);
+        min-height: 4.325em;
+        outline: none;
+        border: 2px transparent;
+        border-radius: 5px;
+    }
+    .form-control:focus{
+        border:2px solid #000000b3;
+    }
+    .card-body{
+        padding:20px;
+    }
+    #titulo{
+        display: flex;
+    }
+    #titulo h2{
+        font-family: 'Orbitron', sans-serif;
+        text-align: start;
+        color:white;
+        font-weight: bold;
+        font-size: 70px;
+        background: -webkit-linear-gradient(rgb(118, 206, 124),rgba(45, 114, 183, 0.785));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;  
+        width: 450px;
+        
+    
+    }
+    #titulo img{
+        height: 250px;
+    }
 }

@@ -257,3 +257,535 @@ footer .container{
     background-color: black !important;
     border:1px solid white !important;
 }
+#anuncio{
+    width: 100vh;
+}
+@media screen and (max-width:1650px){
+    #logo{
+        max-width: 50px;
+        border-radius: 10px ;
+    }
+    nav div{
+        background-color: #000000be !important;
+    }
+    nav{
+        background-color: #000000be !important;
+    }
+    body{
+        background-image: url("./fondo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;    
+    }
+    #contenedor{
+        margin: auto;
+        margin-top: 20px;
+        width: 90%;
+        max-width: 100%;
+        max-height: 800px;
+        position:relative;
+        overflow: hidden;
+    
+    }
+    .slider{
+        display: flex;
+        width: 300%;
+    }
+    
+    .slider img{
+      display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #btn-prev, #btn-next{
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.295);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height :40px;
+        font-size: 22px;
+        font-weight: bold; 
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        font-family: monospace;
+    }
+    #btn-prev:hover, #btn-next:hover{
+        background: rgb(255,255, 255,1);
+    }
+    #btn-prev{
+        margin-top: 20%;
+        left: 10px;
+    }
+    #btn-next{
+        margin-top: 20%;
+        right: 10px;
+    }
+    section h1{
+        font-family:'Courier New', Courier, monospace;
+        color: white;
+        font-size: 70px;
+        margin-left: 5%;
+    }
+    #video{
+        display:flex;
+    
+    
+    }
+    video{
+        margin-top: 5%;
+        border-radius: 250px;
+    }
+    
+    .seccion2 h2{
+        float: left;
+        font-size: 50px;
+        margin-left: 8%;
+        margin-top: 3%;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #icono{
+        width:120px ;
+        
+    }
+    #descripcion{
+        color: white;
+        margin-top: 10%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 25px;
+    }
+    .slider-campeones{
+        display: block;
+        width: 100%;
+        padding-left: auto;
+        height: 100%;
+        animation: cambio 60s infinite alternate linear;
+        width: 1300px;
+    
+      }
+    .contenedor-campeones{
+        display:flex;
+        margin: auto;
+        margin-top: 20px;
+        width: 90%;
+        max-width: 100%;
+        max-height: 700px;
+        position:relative;
+        overflow: hidden;
+     
+       
+    }
+    .seccion2{
+        display:block;
+        width: 600%;
+    
+    }
+    
+    
+    @keyframes cambio {
+        0% {margin-left: -0%;}
+        14% {margin-left: -0%;}
+        
+        16% {margin-left: -105%;}
+        30% {margin-left: -105%;}
+        
+        32% {margin-left: -203%;}
+        46% {margin-left: -203%;}
+        
+        48% {margin-left: -308%;}
+        62% {margin-left: -308%;}
+    
+        64% {margin-left: -410%;}
+        78% {margin-left: -410%;}
+        
+        80% {margin-left: -510%;}
+        94% {margin-left: -510%;}
+    
+    
+    }
+    footer{
+        border-radius: 5px !important;
+        
+    }
+    footer .container{
+        background-color:#000000be;
+    }
+    
+    /* aqui inicia el css del chat*/
+    .chat-container {
+        height: 700px;
+        width: 60%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header {
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    
+    .chat-header h2 {
+        font-size: 70px;
+        margin-left: 8%;
+        color: #fff;
+        font-family:'Courier New', Courier, monospace;
+        text-align: start;
+    }
+    
+    .chat-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+     
+    }
+    
+    .chat-input form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 80vh;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        border:1px solid rgba(255, 255, 255, 0.532);
+        color: #f2f2f2;
+    }
+    
+    .chat-input button[type="submit"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #0084ff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .chat-input button[type="submit"]:hover {
+        background-color: #0066cc;
+    }
+    
+    .chat-history {
+        height: calc(100% - 180px);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2e2d2d7e;
+        background-attachment: fixed;
+    
+    }
+    
+    .chat-history p {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #e6e6e6;
+        color: #333;
+        display: block;
+        max-width: 70%;
+        text-align: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .chat-history p:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+    
+    .chat-history p + p {
+        margin-top: 10px;
+    }
+    .chat-input button{
+        background-color: black !important;
+        border:1px solid white !important;
+    }
+    #anuncio{
+        width: 100vh;
+    }
+}
+@media screen and (max-width:700px){
+    #logo{
+        max-width: 50px;
+        border-radius: 10px ;
+    }
+    nav div{
+        background-color: #000000be !important;
+    }
+    nav{
+        background-color: #000000be !important;
+    }
+    body{
+        background-image: url("./fondo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;    
+    }
+    #contenedor{
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 800px;
+        position:relative;
+        overflow: hidden;
+    
+    }
+    .slider{
+        display: flex;
+        width: 300%;
+    }
+    
+    .slider img{
+      display: block;
+        width: 100%;
+        height: 100%;
+    }
+    #btn-prev, #btn-next{
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.295);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height :40px;
+        font-size: 22px;
+        font-weight: bold; 
+        text-align: center;
+        border-radius: 50%;
+        cursor: pointer;
+        font-family: monospace;
+    }
+    #btn-prev:hover, #btn-next:hover{
+        background: rgb(255,255, 255,1);
+    }
+    #btn-prev{
+        margin-top: 20%;
+        left: 10px;
+    }
+    #btn-next{
+        margin-top: 20%;
+        right: 10px;
+    }
+    section h1{
+        font-family:'Courier New', Courier, monospace;
+        color: white;
+        font-size: 70px;
+        margin-left: 5%;
+    }
+    #video{
+        display:flex;
+    
+    
+    }
+    video{
+        margin-top: 5%;
+        border-radius: 250px;
+    }
+    
+    .seccion2 h2{
+        float: left;
+        font-size: 50px;
+        margin-left: 8%;
+        margin-top: 3%;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    #icono{
+        width:120px ;
+        
+    }
+    #descripcion{
+        color: white;
+        margin-top: 10%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 25px;
+        width: 90%;
+    }
+    .slider-campeones{
+        display: block;
+        width: 100%;
+        padding-left: auto;
+        height: 100%;
+        animation: cambiop 60s infinite alternate linear;
+        width: 1300px;
+    
+      }
+    .contenedor-campeones{
+        display:flex;
+        margin: auto;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 100%;
+        max-height: 1800px;
+        position:relative;
+        overflow: hidden;
+     
+       
+    }
+    .seccion2{
+        display:block;
+        width: 600%;
+    
+    }
+    
+    
+    @keyframes cambiop {
+        0% {margin-left: 0;}
+        14% {margin-left: 0;}
+        
+        16% {margin-left: -105%;}
+        30% {margin-left: -105%;}
+        
+        32% {margin-left: -207%;}
+        46% {margin-left: -207%;}
+        
+        48% {margin-left: -315%;}
+        62% {margin-left: -315%;}
+    
+        64% {margin-left: -417%;}
+        78% {margin-left: -417%;}
+        
+        80% {margin-left: -525%;}
+        94% {margin-left: -525%;}
+    
+    
+    }
+    footer{
+        border-radius: 5px !important;
+        
+    }
+    footer .container{
+        background-color:#000000be;
+    }
+    
+    /* aqui inicia el css del chat*/
+    .chat-container {
+        height: 700px;
+        width: 100%;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header {
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    
+    .chat-header h2 {
+        font-size: 70px;
+        margin-left: 8%;
+        color: #fff;
+        font-family:'Courier New', Courier, monospace;
+        text-align: start;
+    }
+    
+    .chat-input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        
+    }
+    
+    .chat-input form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 90%;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        border:1px solid rgba(255, 255, 255, 0.532);
+        color: #f2f2f2;
+    }
+    
+    .chat-input button[type="submit"] {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #0084ff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .chat-input button[type="submit"]:hover {
+        background-color: #0066cc;
+    }
+    
+    .chat-history {
+        height: calc(100% - 180px);
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #2e2d2d7e;
+        background-attachment: fixed;
+    
+    }
+    
+    .chat-history p {
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #e6e6e6;
+        color: #333;
+        display: block;
+        max-width: 70%;
+        text-align: center;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    }
+    
+    .chat-history p:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+    
+    .chat-history p + p {
+        margin-top: 10px;
+    }
+    .chat-input button{
+        background-color: black !important;
+        border:1px solid white !important;
+    }
+    #anuncio{
+        width: 100%;
+    }
+}

@@ -1,0 +1,459 @@
+#logo{
+    max-width: 50px;
+    border-radius: 10px ;
+}
+nav div{
+    background-color: #000000be !important;
+}
+nav{
+    background-color: #000000be !important;
+}
+body{
+    background-image: url("./fondo.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;    
+}
+
+footer{
+    border-radius: 5px !important;
+    
+}
+footer .container{
+    background-color:#000000be;
+}
+#fondo{
+    --opacidad-negro: 0.8;
+    background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("sombra.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;   
+    width:100%;
+    -webkit-filter: blur(3px);
+    height: 65vh;
+    position: absolute;
+    z-index: -1;
+}
+
+#imagen img{
+    
+    width: 100%;
+}
+#fondo-reference{
+    float: left;
+    margin-top: 5%;
+    color: white;
+}
+h1{
+    
+font-family: serif;
+font-size: 50px;
+font-weight: bold;
+padding-left: 20px;
+}
+#text{
+    margin-top: 6%;
+}
+#tipo-principal{
+    font-size: 13px;
+    color: gray;
+}
+#descripcion-principal{
+    margin-top: 2%;
+    width: 85%;
+    font-size: 18px;
+    color: rgb(194, 194, 194);
+    padding-left: 20px;
+}
+.img-noticia img{
+    width: 450px;
+    margin-left: 20%;
+}
+.notice{
+    padding-top: 8%;
+}
+.tipo{
+    color: rgb(52, 197, 255);
+    font-size: 12px;
+}
+h2{
+    color:white;
+    font-family: serif;
+}
+.descripcion{
+    color: rgb(188, 188, 188);
+}
+.fecha{
+    color: grey;
+    font-weight: bold;
+
+}
+#container-notice{
+    margin-left: 22%;
+}
+#anuncio{
+    background-image: url('anuncio1.jpg');
+    background-repeat: no-repeat;
+
+
+    width: 480px;
+    height: 1000px;
+    float: top;
+    position:absolute;
+    top:900px;
+    left: 100px;
+}
+.img-noticia img:hover{
+  animation: escalar 1s linear forwards;
+  overflow: hidden;
+}
+@keyframes escalar {
+    0%{scale: 1;}
+    100%{scale:1.1}
+}
+#imagen img:hover{
+    border: 2px solid transparent;
+    animation: bordeado 3s  linear infinite;
+   
+}
+@keyframes bordeado {
+    0% {
+      border-top-color: #efb810;
+      border-right-color: #efb810;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    25% {
+      border-top-color: transparent;
+      border-right-color: #efb810;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    50% {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: #efb810;
+      border-left-color: #efb810;
+    }
+    75% {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: #efb810;
+    }
+    100%{
+        border-top-color: #efb810;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #efb810;
+    }
+  }
+ @media screen and (max-width:1650px) {
+    #logo{
+        max-width: 50px;
+        border-radius: 10px ;
+    }
+    nav div{
+        background-color: #000000be !important;
+    }
+    nav{
+        background-color: #000000be !important;
+    }
+    body{
+        background-image: url("./fondo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;    
+    }
+    
+    footer{
+        border-radius: 5px !important;
+        
+    }
+    footer .container{
+        background-color:#000000be;
+    }
+    #fondo{
+        --opacidad-negro: 0.8;
+        background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("sombra.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;   
+        width:100%;
+        -webkit-filter: blur(3px);
+        height: 65vh;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    #imagen img{
+        
+        width: 100%;
+    }
+    #fondo-reference{
+        float: left;
+        margin-top: 5%;
+        color: white;
+    }
+    h1{
+        
+    font-family: serif;
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 20px;
+    }
+    #text{
+        margin-top: 6%;
+    }
+    #tipo-principal{
+        font-size: 13px;
+        color: gray;
+    }
+    #descripcion-principal{
+        margin-top: 2%;
+        width: 85%;
+        font-size: 18px;
+        color: rgb(194, 194, 194);
+        padding-left: 20px;
+    }
+    .img-noticia img{
+        width: 450px;
+        margin-left: 20%;
+    }
+    .notice{
+        padding-top: 8%;
+    }
+    .tipo{
+        color: rgb(52, 197, 255);
+        font-size: 12px;
+    }
+    h2{
+        color:white;
+        font-family: serif;
+    }
+    .descripcion{
+        color: rgb(188, 188, 188);
+    }
+    .fecha{
+        color: grey;
+        font-weight: bold;
+    
+    }
+    #container-notice{
+        margin-left: 22%;
+    }
+    #anuncio{
+        background-image: url('anuncio1.jpg');
+        background-repeat: no-repeat;
+        width: 450px;
+        height: 1000px;
+        float: top;
+        position:absolute;
+        top:750px;
+        left: 50px;
+    }
+    .img-noticia img:hover{
+      animation: escalar 1s linear forwards;
+      overflow: hidden;
+    }
+    @keyframes escalar {
+        0%{scale: 1;}
+        100%{scale:1.1}
+    }
+    #imagen img:hover{
+        border: 2px solid transparent;
+        animation: bordeado 3s  linear infinite;
+       
+    }
+    @keyframes bordeado {
+        0% {
+          border-top-color: #efb810;
+          border-right-color: #efb810;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+        25% {
+          border-top-color: transparent;
+          border-right-color: #efb810;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+        50% {
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: #efb810;
+          border-left-color: #efb810;
+        }
+        75% {
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          border-left-color: #efb810;
+        }
+        100%{
+            border-top-color: #efb810;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #efb810;
+        }
+      }
+     
+ }
+ @media screen and (max-width:700px){
+    #logo{
+        max-width: 50px;
+        border-radius: 10px ;
+    }
+    nav div{
+        background-color: #000000be !important;
+    }
+    nav{
+        background-color: #000000be !important;
+    }
+    body{
+        background-image: url("./fondo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;    
+    }
+    
+    footer{
+        border-radius: 5px !important;
+        max-height: 200px;
+        
+    }
+    footer .container{
+        background-color:transparent;
+    }
+  
+  
+    #fondo{
+        --opacidad-negro: 0.8;
+        background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("sombra.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;   
+        width:100%;
+        -webkit-filter: blur(3px);
+        height: 65vh;
+        position: absolute;
+        z-index: -1;
+    }
+    
+    #imagen img{
+        
+        width: 100%;
+    }
+    #fondo-reference{
+        float: left;
+        margin-top: 5%;
+        color: white;
+    }
+    h1{
+        
+    font-family: serif;
+    font-size: 50px;
+    font-weight: bold;
+    padding-left: 20px;
+    }
+    #text{
+        margin-top: 6%;
+    }
+    #tipo-principal{
+        font-size: 13px;
+        color: gray;
+    }
+    #descripcion-principal{
+        margin-top: 2%;
+        width: 85%;
+        font-size: 18px;
+        color: rgb(194, 194, 194);
+        padding-left: 0px;
+    }
+    .img-noticia img{
+        width: 450px;
+        margin-left: 5%;
+    }
+    .notice{
+        float: left;
+        padding-top: 8%;
+        align-items: start;
+    }
+    .tipo{
+        color: rgb(52, 197, 255);
+        font-size: 12px;
+    }
+    h2{
+        color:white;
+        font-family: serif;
+    }
+    .descripcion{
+        color: rgb(188, 188, 188);
+    }
+    .fecha{
+        color: grey;
+        font-weight: bold;
+    
+    }
+    #container-notice{
+        margin-left: 0%;
+    }
+    #anuncio{
+        background-image: url('anuncio1.jpg');
+        background-repeat: no-repeat;
+        display: none;
+    
+        width: 480px;
+        height: 1000px;
+        float: top;
+        position:absolute;
+        top:900px;
+        left: 100px;
+    }
+    .img-noticia img:hover{
+      animation: escalar 1s linear forwards;
+      overflow: hidden;
+    }
+    @keyframes escalar {
+        0%{scale: 1;}
+        100%{scale:1.1}
+    }
+    #imagen img:hover{
+        border: 2px solid transparent;
+        animation: bordeado 3s  linear infinite;
+       
+    }
+    @keyframes bordeado {
+        0% {
+          border-top-color: #efb810;
+          border-right-color: #efb810;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+        25% {
+          border-top-color: transparent;
+          border-right-color: #efb810;
+          border-bottom-color: transparent;
+          border-left-color: transparent;
+        }
+        50% {
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: #efb810;
+          border-left-color: #efb810;
+        }
+        75% {
+          border-top-color: transparent;
+          border-right-color: transparent;
+          border-bottom-color: transparent;
+          border-left-color: #efb810;
+        }
+        100%{
+            border-top-color: #efb810;
+            border-right-color: transparent;
+            border-bottom-color: transparent;
+            border-left-color: #efb810;
+        }
+      }
+     
+ }

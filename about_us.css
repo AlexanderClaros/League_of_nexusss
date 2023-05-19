@@ -101,3 +101,214 @@ footer .container{
 	0% {border-radius: 150px 50px 150px 50px;}
 	100% {border-radius: 50px 150px 50px 150px;scale: 1.2; translate:0px 20px ;}
 }
+@media screen and (max-width:1650px) {
+    #logo{
+        max-width: 50px;
+        border-radius: 10px ;
+    }
+    nav div{
+        background-color: #000000be !important;
+    }
+    nav{
+        background-color: #000000be !important;
+    }
+    body{
+        background-image: url("./fondo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;    
+    }
+    
+    section h1{
+        font-family:'Courier New', Courier, monospace;
+        color: white;
+        font-size: 70px;
+        margin-left: 5%;
+    }
+    
+    
+    footer{
+        border-radius: 5px !important;
+        
+    }
+    footer .container{
+        background-color:#000000be;
+    }
+    
+    #mision img{
+        opacity: 1;
+        max-width: 40rem;
+        border-radius: 50px 150px 50px 150px;
+        
+    }
+    #mision img:hover{
+        animation: cambio 2s alternate linear forwards;
+    }
+    @keyframes cambio {
+        0% {border-radius: 50px 150px 50px 150px;}
+        100% {border-radius: 150px 50px 150px 50px;scale: 1.2; translate:0px 20px ;}
+    }
+    #mision-content h2{
+        margin-top: 3%;
+        text-align: center;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 50px;
+    }
+    #mision-content p{
+        margin-top: 3%;
+        text-align: justify;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 25px;
+    }
+    #seccion1{
+        margin: 0px;
+        width: 1250px;
+        
+    }
+    #row{
+        width: 90vw !important;
+    }
+    #creacion img{
+        margin-top: 10%;
+        width: 40rem;
+        border-radius: 150px 50px 150px 50px;
+    }
+    #creacion-content h2{
+        margin-top: 10%;
+        text-align: center;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 50px;
+    }
+    #creacion-content p{
+        margin-top: 3%;
+        text-align: justify;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 25px;
+    }
+    #seccion2{
+        margin-top:100px;
+        width: 90%;
+        margin-bottom: 100px;
+    }
+    #creacion img:hover{
+        animation: cambio2 2s alternate linear forwards;
+    }
+    @keyframes cambio2 {
+        0% {border-radius: 150px 50px 150px 50px;}
+        100% {border-radius: 50px 150px 50px 150px;scale: 1.2; translate:0px 20px ;}
+    }
+}
+
+@media screen and (max-width:700px) {
+    #logo{
+        max-width: 50px;
+        border-radius: 10px ;
+    }
+    nav div{
+        background-color: #000000be !important;
+    }
+    nav{
+        background-color: #000000be !important;
+    }
+    body{
+        background-image: url("./fondo.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;    
+    }
+    
+    section h1{
+        font-family:'Courier New', Courier, monospace;
+        color: white;
+        font-size: 70px;
+        margin-left: 5%;
+    }
+    
+    
+    footer{
+        border-radius: 5px !important;
+        
+    }
+    footer .container{
+        background-color:#000000be;
+    }
+    
+    #mision img{
+        opacity: 1;
+        max-width: 30rem;
+        border-radius: 50px ;
+        
+    }
+    #mision img:hover{
+        animation: cambio 2s alternate linear forwards;
+    }
+    @keyframes cambio {
+        0% {border-radius: 50px;}
+        100% {border-radius: 0px;scale: 1.2; translate:25px 0px ;}
+    }
+    #mision-content h2{
+        margin-top: 3%;
+        text-align: center;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 50px;
+    }
+    #mision-content p{
+        margin-top: 3%;
+        text-align: justify;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 25px;
+    }
+    #seccion1{
+        margin-left: 30px;
+        width: 100%;
+    }
+    #row{
+        width: 90vw !important;
+    }
+    #creacion img{
+        margin-top: 10%;
+        width: 30rem;
+        border-radius: 50px;
+    }
+    #creacion-content h2{
+        margin-top: 10%;
+        text-align: center;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 50px;
+    }
+    #creacion-content p{
+        margin-top: 3%;
+        text-align: justify;
+        color: aliceblue;
+        font-family:'Courier New', Courier, monospace ;
+        font-weight:500;
+        font-size: 25px;
+    }
+    #seccion2{
+        margin-top:100px;
+        width: 90%;
+        margin-bottom: 100px;
+    }
+    #creacion img:hover{
+        animation: cambio2 2s alternate linear forwards;
+    }
+    @keyframes cambio2 {
+        0% {border-radius: 50px;}
+        100% {border-radius:0px;scale: 1.2; translate:25px 0px ;}
+    }
+   
+}
