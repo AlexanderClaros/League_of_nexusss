@@ -1,3 +1,23 @@
+#icono-jugador img{
+    width: 50px;
+    border-radius: 50px;
+
+}
+#perfil{
+    margin-left: 15px;
+    display: flex;
+    text-decoration: none;
+    margin-top: 10px;
+}
+#perfil p{
+    margin-top: 2%;
+    padding-right: 10px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+    
 #logo{
     max-width: 50px;
     border-radius: 10px ;
@@ -9,7 +29,7 @@ nav{
     background-color: #000000be !important;
 }
 body{
-    background-image: url("./fondo.png");
+    background-image: url("../media/imagenes/general/fondo.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;    
@@ -24,7 +44,7 @@ footer .container{
 }
 #fondo{
     --opacidad-negro: 0.8;
-    background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("sombra.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("../media/imagenes/noticias_img/sombra.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;   
@@ -92,7 +112,7 @@ h2{
     margin-left: 22%;
 }
 #anuncio{
-    background-image: url('anuncio1.jpg');
+    background-image: url('../media/imagenes/anuncios/anuncio1.jpg');
     background-repeat: no-repeat;
 
 
@@ -149,6 +169,26 @@ h2{
     }
   }
  @media screen and (max-width:1650px) {
+    #icono-jugador img{
+        width: 50px;
+        border-radius: 50px;
+    
+    }
+    #perfil{
+        margin-left: 15px;
+        display: flex;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    #perfil p{
+        margin-top: 2%;
+        padding-right: 10px;
+        color: whitesmoke;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+        
     #logo{
         max-width: 50px;
         border-radius: 10px ;
@@ -160,7 +200,7 @@ h2{
         background-color: #000000be !important;
     }
     body{
-        background-image: url("./fondo.png");
+        background-image: url("../media/imagenes/general/fondo.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;    
@@ -175,7 +215,7 @@ h2{
     }
     #fondo{
         --opacidad-negro: 0.8;
-        background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("sombra.jpg");
+        background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("../media/imagenes/noticias_img/sombra.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;   
@@ -243,7 +283,7 @@ h2{
         margin-left: 22%;
     }
     #anuncio{
-        background-image: url('anuncio1.jpg');
+        background-image: url('../media/imagenes/anuncios/anuncio1.jpg');
         background-repeat: no-repeat;
         width: 450px;
         height: 1000px;
@@ -300,6 +340,26 @@ h2{
      
  }
  @media screen and (max-width:700px){
+    #icono-jugador img{
+        width: 50px;
+        border-radius: 50px;
+    
+    }
+    #perfil{
+        margin-left: 15px;
+        display: flex;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    #perfil p{
+        margin-top: 2%;
+        padding-right: 10px;
+        color: whitesmoke;
+        text-transform: uppercase;
+        font-size: 30px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+        
     #logo{
         max-width: 50px;
         border-radius: 10px ;
@@ -311,7 +371,7 @@ h2{
         background-color: #000000be !important;
     }
     body{
-        background-image: url("./fondo.png");
+        background-image: url("../media/imagenes/general/fondo.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;    
@@ -329,7 +389,7 @@ h2{
   
     #fondo{
         --opacidad-negro: 0.8;
-        background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("sombra.jpg");
+        background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),url("../media/imagenes/noticias_img/sombra.jpg");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;   
@@ -399,7 +459,7 @@ h2{
         margin-left: 0%;
     }
     #anuncio{
-        background-image: url('anuncio1.jpg');
+        background-image: url('../media/imagenes/anuncios/anuncio1.jpg');
         background-repeat: no-repeat;
         display: none;
     

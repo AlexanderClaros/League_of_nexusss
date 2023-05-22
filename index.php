@@ -28,60 +28,47 @@ setcookie('user','',time()-(60*5));
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet"> 
     <title>Inicio</title>
-    
+    <script src="./js/index.js"></script>
 </head>
 <body>
     <div id="titulo">
-        <img src="logo_inicio.png" alt="">
+        <img src="./media/imagenes/general/logo_inicio.png" alt="">
         <h2 class="mt-4 card-title">LEAGUE OF NEXUS</h2>
     </div>
     <div id="prueba">
         <div class=" card bg-dark">
-            <form action="get_info.php" method="post" class="card-body">
+            <form action="./php/get_info.php" method="post" class="card-body">
                 <br>
                 <label for="usuario">Iniciar Sesión</label>
                 <br>
-                <br>
-                <br>
-                <br>
-                <input type="text" name="usuario"  placeholder="NOMBRE DE USUARIO" class="form-control">
-                <br>
+          
+                <input type="text" name="usuario"  placeholder="NOMBRE DE USUARIO" class="form-control" required>
+                <label for="region" id="region-title">Region</label>
+                <select class="form-select from-select-lg mb-3 bg-dark" name="region" id="region" required>
+                    <option value="">SELECIONA TU REGIÓN</option>
+                    <option value="br1">BR1</option>
+                    <option value="eun1">EUN1</option>
+                    <option value="euw1">EUW1</option>
+                    <option value="jp1">JP1</option>
+                    <option value="kr">KR</option>
+                    <option value="la1">LA1</option>
+                    <option value="la2">LA2</option>
+                    <option value="na1">NA1</option>
+                    <option value="oc1">OC1</option>
+                    <option value="ph2">PH2</option>
+                    <option value="ru">RU</option>
+                    <option value="sg2">SG2</option>
+                    <option value="th2">TH2</option>
+                    <option value="tr1">TR1</option>
+                    <option value="tw2">TW2</option>
+                    <option value="vn2">VN2</option>
+                </select>
                 <br>
                 <button type="submit"  class="btn btn-outline-primary" >Acceder</button>
                 <a href="principal.php" class="btn btn-outline-info mt-3"><p> Entrar como invitado</p></a>
             </form>
             
-            <script>
-                
-                const api = new XMLHttpRequest();
-                api.open('GET','http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json',true);
-                api.send();
-                console.log('entra');
-                api.onreadystatechange =function(){
-                    if(this.status == 200 && this.readyState == 4){
-                        console.log('entra');
-                        var datos = JSON.parse(this.responseText);
-                            console.log(typeof datos.data);
-                            var listado=[]
-                            claves=Object.keys(datos.data);
-                            for(let i=0; i<claves.length;i++){
-                                let clave= claves[i];
-                                listado.push(datos.data[clave].name)
-                                console.log(datos.data[clave].name);
-                            }
-                            // lista.forEach(dato => {
-                            //     listado.push(dato.name)
-                            // });
-                            console.log(listado);
-                            $(document).ready(function() {
-                                $('body').css(
-                                    'background-image','url('+`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${listado[Math.floor(Math.random() * (listado.length- 0) + 0)]}_0.jpg`+')'
-                                );
-                            });
-                        
-                    }
-                }
-            </script>
+            
         </div>
 
     </div>

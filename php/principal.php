@@ -7,19 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js"  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="./principal.js" ></script>
-    <link rel="stylesheet" href="principal.css">
+    <script src="../js/principal.js" ></script>
+    <link rel="stylesheet" href="../css/principal.css">
     <title>League of Nexus</title>
 </head>
 <body>
-  <?php
-      if( isset($_COOKIE['user']) ){
-        $datos = unserialize($_COOKIE['user']);
-        // echo "El valor de la Cookie 'nombre' es [".$datos[1]."]";
-      }//else{
-        // echo "No existe la Cookie";
-      //}
-  ?>
   <!-- Inicio Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -29,7 +21,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">  
-          <img src="anuncio3.jpg" style="width:470px;" alt="">  
+          <img src="../media/imagenes/anuncios/anuncio3.jpg" style="width:470px;" alt="">  
         </div>
         <div class="modal-footer">
             <a href=""><button type="button" class="btn btn-outline-dark">Pidela ya</button></a>
@@ -41,7 +33,7 @@
     <header>
           <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="principal.php"><img  id='logo' src="./logo.png" alt=""></a>
+              <a class="navbar-brand" href="principal.php"><img  id='logo' src="../media/imagenes/general/logo.png" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -54,24 +46,37 @@
                     <a class="nav-link" href="#">Campeones</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="noticias.html">Noticias</a>
+                    <a class="nav-link" href="noticias.php">Noticias</a>
                   </li>
                 </ul>
                 <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Ashe" aria-label="Search">
+                  <div>
+                    <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search">
+                  </div>
                   <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
+                <?php if ( isset($_COOKIE['user']) ){?>
+                  <?php $datos = unserialize($_COOKIE['user']);?>
+                  <a href="https://cybmeta.com/required-en-elementos-select" id='perfil'><p><?php echo($datos[0]);?></p><div id="icono-jugador"></div></a>
+                  <script> 
+                    var numIcon =<?php echo($datos[1]); ?>;
+                    var imagen = document.createElement("img");
+                    imagen.setAttribute('src',`http://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/`+numIcon+`.png`)
+                    document.getElementById("icono-jugador").appendChild(imagen);
+                  </script>
+                <?php } ?>
               </div>
             </div>
           </nav>
+          <div id="campeones_predict_list"> <div></div></div>
     </header>
     <main>
         <section>
           <div id="contenedor">      
             <div class="slider">
-                <div><img src="carrusel1.png"alt=""></div>
-                <div><img src="carrusel2.png" alt=""></div>
-                <div><img src="carrusel3.png" alt=""></div>
+                <div><img src="../media/imagenes/carrusel/carrusel1.png"alt=""></div>
+                <div><img src="../media/imagenes/carrusel/carrusel2.png" alt=""></div>
+                <div><img src="../media/imagenes/carrusel/carrusel3.png" alt=""></div>
             </div>
             <div id="btn-prev">&#60</div>
             <div id="btn-next">&#62</div>
@@ -84,12 +89,12 @@
               <div class="slider-campeones container">
                 <div class="row justify-content-between">
                   <h2 class="col-6">CLASE:TIRADOR</h2>
-                  <img id='icono' class='col-6'src="./iconos/tirador.png" alt="">
+                  <img id='icono' class='col-6'src="../media/imagenes/iconos/tirador.png" alt="">
                 </div>
                 <div class="row justify-content-evenly">
                   <div class="col-md-6" id="video">
                     <video width="500" height="500" class='mx-auto' autoplay muted loop >
-                      <source src="./videos campeones/ashe.mp4" type="video/mp4">
+                      <source src="../media/videos campeones/ashe.mp4" type="video/mp4">
                     </video>
                   </div>
                   <p id="descripcion" class="col-md-6">Los Tiradores son campeones a distancia cuyo poder gira casi exclusivamente en torno a sus ataques básicos: utilizando su alcance para causar daños continuos masivos desde la distancia, los tiradores son capaces de derribar incluso al más duro de los oponentes cuando se coloca detrás de la seguridad de su equipo, y sobresalen en asegurar los objetivos del mapa, como el Dragon Dragon, el Baron Nashor Baron Nashor y las torretas.
@@ -102,12 +107,12 @@
               <div class="slider-campeones container">
                 <div class="row justify-content-between">
                   <h2 class="col-6">CLASE:LUCHADOR</h2>
-                  <img id='icono' class='col-6'src="./iconos/luchador.png" alt="">
+                  <img id='icono' class='col-6'src="../media/imagenes/iconos/luchador.png" alt="">
                 </div>
                 <div class="row justify-content-evenly">
                   <div class="col-md-6" id="video">
                     <video width="500" height="500" class='mx-auto' autoplay muted loop >
-                      <source src="./videos campeones/darius.mp4" type="video/mp4">
+                      <source src="../media/videos campeones/darius.mp4" type="video/mp4">
                     </video>
                   </div>
                   <p id="descripcion" class="col-md-6">
@@ -120,12 +125,12 @@
               <div class="slider-campeones container">
                 <div class="row justify-content-between">
                   <h2 class="col-6">CLASE:ANIQUILADOR</h2>
-                  <img id='icono' class='col-6'src="./iconos/aniquilador.png" alt="">
+                  <img id='icono' class='col-6'src="../media/imagenes/iconos/aniquilador.png" alt="">
                 </div>
                 <div class="row justify-content-evenly">
                   <div class="col-md-6" id="video">
                     <video width="500" height="500" class='mx-auto' autoplay muted loop >
-                      <source src="./videos campeones/kaisa.mp4" type="video/mp4">
+                      <source src="../media/videos campeones/kaisa.mp4" type="video/mp4">
                     </video>
                   </div>
                   <p id="descripcion" class="col-md-6">
@@ -137,12 +142,12 @@
               <div class="slider-campeones container">
                 <div class="row justify-content-between">
                   <h2 class="col-6">CLASE:TANQUE</h2>
-                  <img id='icono' class='col-6'src="./iconos/tanque.png" alt="">
+                  <img id='icono' class='col-6'src="../media/imagenes/iconos/tanque.png" alt="">
                 </div>
                 <div class="row justify-content-evenly">
                   <div class="col-md-6" id="video">
                     <video width="500" height="500" class='mx-auto' autoplay muted loop >
-                      <source src="./videos campeones/shen.mp4" type="video/mp4">
+                      <source src="../media/videos campeones/shen.mp4" type="video/mp4">
                     </video>
                   </div>
                   <p id="descripcion" class="col-md-6">
@@ -156,12 +161,12 @@
   
                 <div class="row justify-content-between">
                   <h2 class="col-6">CLASE:MAGO</h2>
-                  <img id='icono' class='col-6'src="./iconos/mago.png" alt="">
+                  <img id='icono' class='col-6'src="../media/imagenes/iconos/mago.png" alt="">
                 </div>
                 <div class="row justify-content-evenly">
                   <div class="col-md-6" id="video">
                     <video width="500" height="500" class='mx-auto' autoplay muted loop >
-                      <source src="./videos campeones/lux.mp4" type="video/mp4">
+                      <source src="../media/videos campeones/lux.mp4" type="video/mp4">
                     </video>
                   </div>
                   <p id="descripcion" class="col-md-6">
@@ -174,12 +179,12 @@
               <div class="slider-campeones container">
                 <div class="row justify-content-between">
                   <h2 class="col-6">CLASE:CONTROLADOR</h2>
-                  <img id='icono' class='col-6'src="./iconos/controlador.png" alt="">
+                  <img id='icono' class='col-6'src="../media/imagenes/iconos/controlador.png" alt="">
                 </div>
                 <div class="row justify-content-evenly">
                   <div class="col-md-6" id="video">
                     <video width="500" height="500" class='mx-auto' autoplay muted loop >
-                      <source src="./videos campeones/tresh.mp4" type="video/mp4">
+                      <source src="../media/videos campeones/tresh.mp4" type="video/mp4">
                     </video>
                   </div>
                   <p id="descripcion" class="col-md-6">
@@ -207,7 +212,7 @@
           </div>
         </section>
         <div class="container d-flex justify-content-cente" >
-          <a class="mx-auto" href="https://www.dynos.es/ofertas"> <img  class="mx-auto"src="anuncio2.png" id="anuncio" alt=""></a>
+          <a class="mx-auto" href="https://www.dynos.es/ofertas"> <img  class="mx-auto"src="../media/imagenes/anuncios/anuncio2.png" id="anuncio" alt=""></a>
         </div>
     </main>
   <div class="container my-5" id="footer">
@@ -217,7 +222,7 @@
           <div class="row text-center d-flex justify-content-center pt-5">
             <div class="col-md-2">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="./about_us.html" class="text-white">Sobre Nosotros</a>
+                <a href="./about_us.php" class="text-white">Sobre Nosotros</a>
               </h6>
             </div>
             <div class="col-md-2">

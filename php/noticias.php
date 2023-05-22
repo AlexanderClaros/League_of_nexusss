@@ -7,15 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.js"  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
-    <script src="./principal.js" ></script>
-    <link rel="stylesheet" href="noticias.css">
+    <script src="../js/principal.js" ></script>
+    <link rel="stylesheet" href="../css/noticias.css">
     <title>League of Nexus</title>
 </head>
 <body>
     <header>
           <nav class="navbar navbar-expand-lg navbar-dark ">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#"><img  id='logo' src="./logo.png" alt=""></a>
+              <a class="navbar-brand" href="#"><img  id='logo' src="../media/imagenes/general/logo.png" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -32,9 +32,20 @@
                   </li>
                 </ul>
                 <form class="d-flex">
+                  <datalist id="campeones_predict_list"></datalist>
                   <input class="form-control me-2" type="search" placeholder="Ashe" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
+                <?php if ( isset($_COOKIE['user']) ){?>
+                  <?php $datos = unserialize($_COOKIE['user']);?>
+                  <a href="https://cybmeta.com/required-en-elementos-select" id='perfil'><p><?php echo($datos[0]);?></p><div id="icono-jugador"></div></a>
+                  <script> 
+                    var numIcon =<?php echo($datos[1]); ?>;
+                    var imagen = document.createElement("img");
+                    imagen.setAttribute('src',`http://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/`+numIcon+`.png`)
+                    document.getElementById("icono-jugador").appendChild(imagen);
+                  </script>
+                <?php } ?>
               </div>
             </div>
           </nav>
@@ -50,7 +61,7 @@
                     <p id="descripcion-principal">Dejaos llevar por el poder desatado con la música de Sombra de tinta. </p>
                 </div>
                 <div id="imagen" class="col-md-7">
-                    <a href="https://www.youtube.com/watch?v=Eb7fLzUMoEk"><img src="./sombra.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/watch?v=Eb7fLzUMoEk"><img src="../media/imagenes/noticias_img/sombra.jpg" alt=""></a>
                 </div>
             </div>
         </div>
@@ -59,7 +70,7 @@
         <div class="container">
             <div class="notice row  justify-content-center">
                 <div class="img-noticia col-lg-6">
-                    <a href="https://www.youtube.com/shorts/xvydVSJ6GxQ"><img src="chanceux.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/shorts/xvydVSJ6GxQ"><img src="../media/imagenes/noticias_img/chanceux.jpg" alt=""></a>
                 </div>
                 <div class="col-lg-4">
                     <p class="tipo">COMUNIDAD</p>
@@ -70,7 +81,7 @@
             </div>
             <div class="notice row  justify-content-center">
                 <div class="img-noticia col-lg-6">
-                    <a href="https://www.youtube.com/watch?v=IL1aZCpDnEM"><img src="mecha.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/watch?v=IL1aZCpDnEM"><img src="../media/imagenes/noticias_img/mecha.jpg" alt=""></a>
                 </div>
                 <div class="col-lg-4">
                     <p class="tipo">MULTIMEDIA</p>
@@ -81,7 +92,7 @@
             </div>
             <div class="notice row  justify-content-center">
                 <div class="img-noticia col-lg-6">
-                    <a href="https://www.leagueoflegends.com/es-es/news/game-updates/notas-de-la-version-13-10-de-teamfight-tactics/"><img src="ttversion.jpg" alt=""></a>
+                    <a href="https://www.leagueoflegends.com/es-es/news/game-updates/notas-de-la-version-13-10-de-teamfight-tactics/"><img src="../media/imagenes/noticias_img/ttversion.jpg" alt=""></a>
                 </div>
                 <div class="col-lg-4">
                     <p class="tipo">ACTUALIZACIONES DEL JUEGO</p>
@@ -96,7 +107,7 @@
             </div>
             <div class="notice row  justify-content-center">
                 <div class="img-noticia col-lg-6">
-                    <a href="https://www.leagueoflegends.com/es-es/news/game-updates/notas-de-la-version-13-10/"><img src="version.jpg" alt=""></a>
+                    <a href="https://www.leagueoflegends.com/es-es/news/game-updates/notas-de-la-version-13-10/"><img src="../media/imagenes/noticias_img/version.jpg" alt=""></a>
                 </div>
                 <div class="col-lg-4">
                     <p class="tipo">ACTUALIZACIONES DEL JUEGO</p>
@@ -107,7 +118,7 @@
             </div>
             <div class="notice row  justify-content-center">
                 <div class="img-noticia col-lg-6">
-                    <a href="https://www.youtube.com/watch?v=h4WIP7DUWO8"><img src="campeonato.jpg" alt=""></a>
+                    <a href="https://www.youtube.com/watch?v=h4WIP7DUWO8"><img src="../media/imagenes/noticias_img/campeonato.jpg" alt=""></a>
                 </div>
                 <div class="col-lg-4">
                     <p class="tipo">ESPORTS</p>
@@ -152,7 +163,7 @@
           <div  id =" enlace"class=" row text-center d-flex justify-content-center pt-5">
             <div class="col-md-4">
               <h6 class="text-uppercase font-weight-bold">
-                <a href="about_us.html" class="text-white">Sobre Nosotros</a>
+                <a href="about_us.php" class="text-white">Sobre Nosotros</a>
               </h6>
             </div>
             <div class="col-md-4">
@@ -179,7 +190,7 @@
             </div>
             <div class="text-center p-3"style="background-color: rgba(0, 0, 0, 0.2)">
               © 2023 Copyright:
-              <a class="text-white" href="#">League of Nexus</a>
+              <a class="text-white" href="principal.php">League of Nexus</a>
             </div>
           </section>
         </section>

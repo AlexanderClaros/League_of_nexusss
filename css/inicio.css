@@ -87,6 +87,15 @@ a p:hover{
 #titulo img{
     height: 350px;
 }
+#region-title{
+    font-size: 25px;
+    margin-top:10px
+}
+#region{
+    color:rgba(153, 153, 153, 0.485) ;
+    background-color: rgb(126,126,126,0.1);
+
+}
 @media screen and (max-width:1650px){
     .card{
         min-width: 450px;

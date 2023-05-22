@@ -1,3 +1,23 @@
+#icono-jugador img{
+    width: 50px;
+    border-radius: 50px;
+
+}
+#perfil{
+    margin-left: 15px;
+    display: flex;
+    text-decoration: none;
+    margin-top: 10px;
+}
+#perfil p{
+    margin-top: 2%;
+    padding-right: 10px;
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+    
 #logo{
     max-width: 50px;
     border-radius: 10px ;
@@ -9,7 +29,7 @@ nav{
     background-color: #000000be !important;
 }
 body{
-    background-image: url("./fondo.png");
+    background-image: url("../media/imagenes/general/fondo.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;    
@@ -113,7 +133,7 @@ footer .container{
         background-color: #000000be !important;
     }
     body{
-        background-image: url("./fondo.png");
+        background-image: url("../media/imagenes/general/fondo.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;    
@@ -219,7 +239,7 @@ footer .container{
         background-color: #000000be !important;
     }
     body{
-        background-image: url("./fondo.png");
+        background-image: url("../media/imagenes/general/fondo.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;    
