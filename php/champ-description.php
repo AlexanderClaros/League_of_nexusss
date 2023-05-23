@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/about_us.css">
     <title>League of Nexus</title>
     <link rel="stylesheet" href="../css/champ-description.css">
-    
+    <link rel="shortcut icon" href="../media/imagenes/general/logo_inicio.png">
 </head>
 <body>
   <header>

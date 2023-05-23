@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js"  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="../js/principal.js" ></script>
     <link rel="stylesheet" href="../css/principal.css">
+    <link rel="shortcut icon" href="../media/imagenes/general/logo_inicio.png">
     <title>League of Nexus</title>
 </head>
 <body>

@@ -142,6 +142,9 @@ function envia(){
                 document.cookie = `campeon=`+valor.replace('.png','')+`; expires=`+fecha+`; path=/;`; 
                 window.location.href="../php/champ-description.php";
             }
+            else{
+                console.log('no se envia');
+            }
         }); 
         } catch(error){
             console.log('no se ha enviado');
