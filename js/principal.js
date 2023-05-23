@@ -127,3 +127,24 @@ function mostrar_descripcion(nombre){
     document.cookie = `campeon=`+nombre+`; expires=`+fecha+`; path=/;`; 
     window.location.href="../php/champ-description.php";
 }
+
+function envia(){
+    try{
+
+        var entrada =document.getElementById("buscador");
+        entrada_corregida=entrada.value.toString();
+        entrada_corregida= entrada_corregida[0].toUpperCase()+entrada_corregida.substring(1,55).toLowerCase();
+        listado.forEach(function(valor,elemento) {
+            if (elemento == entrada_corregida) {
+                var fecha = new Date();
+                fecha.setTime(fecha.getTime() + (1*24*60*60*1000));
+                fecha.toUTCString();
+                document.cookie = `campeon=`+valor.replace('.png','')+`; expires=`+fecha+`; path=/;`; 
+                window.location.href="../php/champ-description.php";
+            }
+        }); 
+        } catch(error){
+            console.log('no se ha enviado');
+        }
+    
+}

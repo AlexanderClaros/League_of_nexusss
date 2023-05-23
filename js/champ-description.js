@@ -14,12 +14,17 @@ function getCookie(cname) {
   }
   return "";
 }
-var valor=getCookie('campeon');
-if (typeof valor !== 'undefined') {
-  var championName = valor;
-}else{
-  var championName = 'Aatrox';
-}
+var championName =''; 
+
+  var valor=getCookie('campeon');
+  
+  if (typeof valor !== 'undefined') {
+    championName = valor;
+  }else{
+    window.location='./principal';
+  }
+  
+
 
 
 fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championName + '.json')

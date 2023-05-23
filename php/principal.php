@@ -49,9 +49,9 @@
                     <a class="nav-link" href="noticias.php">Noticias</a>
                   </li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search"> 
-                  <button class="btn btn-outline-info" type="submit">Buscar</button>
+                <form class="d-flex" action="./champ-description.php" method="POST" >
+                  <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador"  placeholder="Ashe" aria-label="Search"> 
+                  <button class="btn btn-outline-info" onclick="envia()">Buscar</button>
                 </form>
                 <?php if ( isset($_COOKIE['user']) ){?>
                   <?php $datos = unserialize($_COOKIE['user']);?>
