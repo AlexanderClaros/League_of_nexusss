@@ -34,11 +34,11 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     var name = data.data[championName].name;
     var title = data.data[championName].title;
     var description = data.data[championName].blurb;
-    var champPassive = data.data[championName].passive.image.full;
-    var champQ = data.data[championName].spells[0].image.full;
-    var champW = data.data[championName].spells[1].image.full;
-    var champE = data.data[championName].spells[2].image.full;
-    var champR = data.data[championName].spells[3].image.full;
+    var champPassive = data.data[championName].passive;
+    var champQ = data.data[championName].spells[0];
+    var champW = data.data[championName].spells[1];
+    var champE = data.data[championName].spells[2];
+    var champR = data.data[championName].spells[3];
     var body = document.getElementsByTagName('body')[0];
     var mainContainer = document.getElementById("main-container");
     var champName = document.getElementById("champ-name");
@@ -49,17 +49,19 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     var w = document.getElementById("w");
     var e = document.getElementById("e");
     var r = document.getElementById("r");
+    var abilityDescr = document.getElementById("descr");
+
     
     champName.innerHTML = name;
     champTitle.innerHTML = title;
     champDescription.innerHTML = description;
     body.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
     //mainContainer.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
-    passive.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/" + champPassive + "')";
-    q.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champQ + "')";
-    w.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champW + "')";
-    e.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champE + "')";
-    r.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champR + "')";
+    passive.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/" + champPassive.image.full + "')";
+    q.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champQ.image.full + "')";
+    w.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champW.image.full + "')";
+    e.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champE.image.full + "')";
+    r.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champR.image.full + "')";
     
     var info = data.data[championName].info;
     var attack = info.attack;

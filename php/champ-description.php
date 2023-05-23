@@ -118,16 +118,54 @@
           
       </footer>
     </div>
+    <div id="descr"></div>
     <div class="container" id="right">
-      <div id="passive"></div>
-      <div id="q"></div>
-      <div id="w"></div>
-      <div id="e"></div>
-      <div id="r"></div>
+      <div id="passive" onmouseover="printData(this.id)" onblur="clear()"></div>
+      <div id="q" onmouseover="printData(this.id)" onblur="clear()"></div>
+      <div id="w" onmouseover="printData(this.id)" onblur="clear()"></div>
+      <div id="e" onmouseover="printData(this.id)" onblur="clear()"></div>
+      <div id="r" onmouseover="printData(this.id)" onblur="clear()"></div>
     </div>
 
   </div>
   <script src="../js/champ-description.js"></script>
+  <script>
+    function printData(id) {
+      var abilityDescr = document.getElementById("descr");
+      var championName = document.getElementById("champ-name").innerText;
+      var championNameFormatted = championName.replace(/\s/g, "").replace(/[^\w\s]/gi, "");
+
+      fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championNameFormatted + '.json')
+        .then(response => response.json())
+        .then(data => {
+          var champPassive = data.data[championName].passive;
+          var champQ = data.data[championName].spells[0];
+          var champW = data.data[championName].spells[1];
+          var champE = data.data[championName].spells[2];
+          var champR = data.data[championName].spells[3];
+
+          if (id == "q") {
+            abilityDescr.innerHTML = champQ.description.replace(/<[^>]*>/g, "");
+          } else if (id == "w") {
+            abilityDescr.innerHTML = champW.description.replace(/<[^>]*>/g, "");
+          } else if (id == "e") {
+            abilityDescr.innerHTML = champE.description.replace(/<[^>]*>/g, "");
+          } else if (id == "r") {
+            abilityDescr.innerHTML = champR.description.replace(/<[^>]*>/g, "");
+          } else {
+            abilityDescr.innerHTML = champPassive.description.replace(/<[^>]*>/g, "");
+          }
+
+        })
+        .catch(error => {
+          console.log('Error:', error);
+        });
+    }
+
+    function clear() {
+      document.getElementById("descr").innerHTML = "";
+    }
+  </script>
 </body>
 </html>
 
