@@ -11,7 +11,6 @@ curl_setopt($ch, CURLOPT_HEADER, 0);
 $data = curl_exec($ch); 
 curl_close($ch); 
 $info= explode(",",$data);
-echo($info[1]);
 if (str_contains($info[1],"\"status_code\":404" ) == true) {
     header("Location:../index.php");
 }else{
