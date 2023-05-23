@@ -28,12 +28,11 @@
                     <a class="nav-link" href="#">Campeones</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page"href="noticias.html">Noticias</a>
+                    <a class="nav-link active" aria-current="page"href="noticias.php">Noticias</a>
                   </li>
                 </ul>
                 <form class="d-flex">
-                  <datalist id="campeones_predict_list"></datalist>
-                  <input class="form-control me-2" type="search" placeholder="Ashe" aria-label="Search">
+                  <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search"> 
                   <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
                 <?php if ( isset($_COOKIE['user']) ){?>
@@ -49,6 +48,7 @@
               </div>
             </div>
           </nav>
+          <div id="campeones_predict_list"> <div></div></div>
     </header>
     <main>
         <section id="section1">

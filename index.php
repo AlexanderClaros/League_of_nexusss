@@ -65,7 +65,7 @@ setcookie('user','',time()-(60*5));
                 </select>
                 <br>
                 <button type="submit"  class="btn btn-outline-primary" >Acceder</button>
-                <a href="principal.php" class="btn btn-outline-info mt-3"><p> Entrar como invitado</p></a>
+                <a href="./php/principal.php" class="btn btn-outline-info mt-3"><p> Entrar como invitado</p></a>
             </form>
             
             

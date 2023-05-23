@@ -1,3 +1,57 @@
+#buscador{
+    background-color: #333;
+    color: white;
+}
+#campeones_predict_list{
+    position: absolute;
+    z-index:3;
+    height: cover;
+    max-height: 60vh;
+    overflow: hidden;
+    width: 500px;
+    right: 10px;
+    overflow-y: scroll;
+}
+#campeones_predict_list::-webkit-scrollbar {
+    width: 10px; 
+  }
+#campeones_predict_list::-webkit-scrollbar-thumb {
+background-color: #888; 
+border-radius: 5px; 
+}
+#campeones_predict_list::-webkit-scrollbar-thumb:hover {
+background-color: #555; 
+}
+#campeon_list_contain{
+    background-attachment:local;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    margin-top: 5px;
+    height: 60px;
+    width: 100%;
+    border-radius: 20px;
+    right: 10px;
+    z-index: 3;
+    
+    
+}
+#campeon_list_contain:hover{
+    height:100px; 
+ 
+}
+
+#campeon_list_contain img{
+    padding: 5px;
+    height: 90%;
+    border-radius: 20px;
+
+}
+#campeon_list_contain h3{
+ color:white;
+ font-size: 50px;
+ font-family: 'Courier New', Courier, monospace;
+}
 #icono-jugador img{
     width: 50px;
     border-radius: 50px;

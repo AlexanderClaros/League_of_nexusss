@@ -88,6 +88,8 @@ api.onreadystatechange =function(){
 }
 console.log(listado);
 function cambia(){
+ try{
+
  
     var entrada =document.getElementById("buscador");
     entrada_corregida=entrada.value.toString();
@@ -108,9 +110,13 @@ function cambia(){
             fila.appendChild(imagen);
             fila.appendChild(nombre);
             contenedor.appendChild(fila);
-            fila.setAttribute('style',`background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/loading/`+valor.replace('.png','')+`_0.jpg');`)
+            fila.setAttribute('style',`background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/`+valor.replace('.png','')+`_0.jpg');`)
 
         }
-    });
+    }); 
+    } catch(error){
+        var contenedor = document.getElementById("campeones_predict_list");
+        contenedor.innerHTML='';
+    }
 }
     

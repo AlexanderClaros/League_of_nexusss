@@ -50,10 +50,8 @@
                   </li>
                 </ul>
                 <form class="d-flex">
-                  <div>
-                    <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search">
-                  </div>
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                  <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search"> 
+                  <button class="btn btn-outline-info" type="submit">Buscar</button>
                 </form>
                 <?php if ( isset($_COOKIE['user']) ){?>
                   <?php $datos = unserialize($_COOKIE['user']);?>
