@@ -14,12 +14,17 @@ function getCookie(cname) {
   }
   return "";
 }
-var valor=getCookie('campeon');
-if (typeof valor !== 'undefined') {
-  var championName = valor;
-}else{
-  var championName = 'Aatrox';
-}
+var championName =''; 
+
+  var valor=getCookie('campeon');
+  
+  if (typeof valor !== 'undefined') {
+    championName = valor;
+  }else{
+    window.location='./principal';
+  }
+  
+
 
 
 fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championName + '.json')
@@ -49,7 +54,7 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     champTitle.innerHTML = title;
     champDescription.innerHTML = description;
     body.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
-    // mainContainer.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
+    //mainContainer.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
     passive.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/" + champPassive + "')";
     q.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champQ + "')";
     w.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champW + "')";

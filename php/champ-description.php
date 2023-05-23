@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/about_us.css">
     <title>League of Nexus</title>
     <link rel="stylesheet" href="../css/champ-description.css">
-    <script src="../js/champ-description.js"></script>
+    <link rel="shortcut icon" href="../media/imagenes/general/logo_inicio.png">
 </head>
 <body>
   <header>
@@ -33,9 +33,9 @@
               <a class="nav-link" href="noticias.php">Noticias</a>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search"> 
-            <button class="btn btn-outline-info" type="submit">Buscar</button>
+          <form class="d-flex" action="./champ-description.php" method="POST" >
+            <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador"  placeholder="Ashe" aria-label="Search"> 
+            <button class="btn btn-outline-info" onclick="envia()">Buscar</button>
           </form>
           <?php if ( isset($_COOKIE['user']) ){?>
             <?php $datos = unserialize($_COOKIE['user']);?>
@@ -127,6 +127,7 @@
     </div>
 
   </div>
+  <script src="../js/champ-description.js"></script>
 </body>
 </html>
 

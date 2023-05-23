@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js"  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="../js/principal.js" ></script>
     <link rel="stylesheet" href="../css/principal.css">
+    <link rel="shortcut icon" href="../media/imagenes/general/logo_inicio.png">
     <title>League of Nexus</title>
 </head>
 <body>
@@ -49,9 +50,9 @@
                     <a class="nav-link" href="noticias.php">Noticias</a>
                   </li>
                 </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador" placeholder="Ashe" aria-label="Search"> 
-                  <button class="btn btn-outline-info" type="submit">Buscar</button>
+                <form class="d-flex" action="./champ-description.php" method="POST" >
+                  <input class="form-control me-2"type="search" onkeyup="cambia()" id="buscador"  placeholder="Ashe" aria-label="Search"> 
+                  <button class="btn btn-outline-info" onclick="envia()">Buscar</button>
                 </form>
                 <?php if ( isset($_COOKIE['user']) ){?>
                   <?php $datos = unserialize($_COOKIE['user']);?>
