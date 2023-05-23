@@ -87,6 +87,7 @@ api.onreadystatechange =function(){
     }
 }
 console.log(listado);
+
 function cambia(){
  try{
 
@@ -110,8 +111,8 @@ function cambia(){
             fila.appendChild(imagen);
             fila.appendChild(nombre);
             contenedor.appendChild(fila);
-            fila.setAttribute('style',`background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/`+valor.replace('.png','')+`_0.jpg');`)
-
+            fila.setAttribute('style',`background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/`+valor.replace('.png','')+`_0.jpg');border:1px solid white;`)
+            fila.setAttribute('onclick',`mostrar_descripcion(variable='`+valor.replace('.png','')+`')`);
         }
     }); 
     } catch(error){
@@ -119,4 +120,10 @@ function cambia(){
         contenedor.innerHTML='';
     }
 }
-    
+function mostrar_descripcion(nombre){
+    var fecha = new Date()
+    fecha.setTime(fecha.getTime() + (1*24*60*60*1000));
+    fecha.toUTCString()
+    document.cookie = `campeon=`+nombre+`; expires=`+fecha+`; path=/;`; 
+    window.location.href="../php/champ-description.php";
+}

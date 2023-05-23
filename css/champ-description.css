@@ -1,0 +1,125 @@
+/* Estilos generales */
+html,
+body {
+  
+
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-container {
+  width: 100%;
+  height: 93%;
+  text-align: center;
+  position: fixed;
+
+}
+.container {
+  margin: 0 5%;
+  padding: 10px;
+  width: 30%;
+}
+
+  /* Estilos de la sección Overview */
+  .champion-info {
+    margin-top: 10%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .champion-info img {
+    max-width: 200px;
+    height: auto;
+  }
+  .champion-info h1 {
+    font-size: 700%;
+    margin: 0;
+    color: white;
+  }
+  .champion-info p {
+    font-size: 150%;
+    color: white;
+  }
+  .stats {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .stat {
+    width: 415px;
+    height: 30px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  .stat h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  .stat p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:-1;
+  }
+  #passive, #q, #w, #e, #r {
+    width: 64px;
+    height: 64px;
+    float: right;
+    margin-top: 10px;
+    border-radius:10px;
+    box-shadow: 10px 10px 5px black;
+    border:1px solid rgb(180, 173, 133);
+  }
+  #passive:hover, #q:hover, #w:hover, #e:hover, #r:hover {
+    scale:1.2;
+  }
+  #right {
+    bottom: 20px;
+    position: absolute;
+    right: 1px;
+    height: 400px;
+    width: 50px;
+    display: inline;
+  }
+  #attack, #defense, #mage, #difficulty {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(11, 196, 226);
+    
+  }
+  footer{
+    background-color: #f2f2f200!important;
+    margin-left: 0px;
+    
+  }
+  footer .container{
+    border-radius: 10px;
+    margin-left: 0px;
+    width: 60vh;
+  }
+  header{
+    background-color: black;
+  }
+  #info{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100%;
+  }
+#info::-webkit-scrollbar {
+    width: 10px; 
+  }
+#info::-webkit-scrollbar-thumb {
+background-color: #88888800; 
+border-radius: 5px; 
+}
+#info::-webkit-scrollbar-thumb:hover {
+background-color: #55555500; 
+}

@@ -214,7 +214,7 @@
         </div>
     </main>
   <div class="container my-5" id="footer">
-    <footer class="text-center text-white bg-dark" >
+    <footer class="text-center text-white " >
       <div class="container">
         <section class="mt-5">
           <div class="row text-center d-flex justify-content-center pt-5">

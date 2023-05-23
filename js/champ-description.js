@@ -1,4 +1,26 @@
-var championName = "Aatrox";
+function getCookie(cname) {
+  const name = cname + "=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const cookieArray = decodedCookie.split(';');
+
+  for(let i = 0; i < cookieArray.length; i++) {
+    let cookie = cookieArray[i];
+    while (cookie.charAt(0) === ' ') {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(name) === 0) {
+      return cookie.substring(name.length, cookie.length);
+    }
+  }
+  return "";
+}
+var valor=getCookie('campeon');
+if (typeof valor !== 'undefined') {
+  var championName = valor;
+}else{
+  var championName = 'Aatrox';
+}
+
 
 fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championName + '.json')
   .then(response => response.json())
@@ -12,7 +34,7 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     var champW = data.data[championName].spells[1].image.full;
     var champE = data.data[championName].spells[2].image.full;
     var champR = data.data[championName].spells[3].image.full;
-    
+    var body = document.getElementsByTagName('body')[0];
     var mainContainer = document.getElementById("main-container");
     var champName = document.getElementById("champ-name");
     var champTitle = document.getElementById("champ-title");
@@ -26,7 +48,8 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     champName.innerHTML = name;
     champTitle.innerHTML = title;
     champDescription.innerHTML = description;
-    mainContainer.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
+    body.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
+    // mainContainer.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
     passive.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/" + champPassive + "')";
     q.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champQ + "')";
     w.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champW + "')";
