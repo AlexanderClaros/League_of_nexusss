@@ -64,18 +64,30 @@
           </div>
         </div>
         <div class="stats">
+          <h2>Ataque</h2>
           <div class="stat">
             <div id="attack"></div>
           </div>
+          <h2>Defensa</h2>
           <div class="stat">
             <div id="defense"></div>
           </div>
+          <h2>Magia</h2>
           <div class="stat">
             <div id="mage"></div>
           </div>
+          <h2>Dificultad</h2>
           <div class="stat">
             <div id="difficulty"></div>
           </div>
+        </div>
+        <div id="descr"></div>
+        <div class="container" id="right">
+          <div id="passive" onmouseover="printData(this.id)" onmouseout="clear()"></div>
+          <div id="q" onmouseover="printData(this.id)" onmouseout="clear()"></div>
+          <div id="w" onmouseover="printData(this.id)" onmouseout="clear()"></div>
+          <div id="e" onmouseover="printData(this.id)" onmouseout="clear()"></div>
+          <div id="r" onmouseover="printData(this.id)" onmouseout="clear()"></div>
         </div>
         <footer class="text-center text-white " >
         <div class="container">
@@ -118,22 +130,26 @@
           
       </footer>
     </div>
-    <div id="descr"></div>
-    <div class="container" id="right">
-      <div id="passive" onmouseover="printData(this.id)" onblur="clear()"></div>
-      <div id="q" onmouseover="printData(this.id)" onblur="clear()"></div>
-      <div id="w" onmouseover="printData(this.id)" onblur="clear()"></div>
-      <div id="e" onmouseover="printData(this.id)" onblur="clear()"></div>
-      <div id="r" onmouseover="printData(this.id)" onblur="clear()"></div>
-    </div>
-
   </div>
   <script src="../js/champ-description.js"></script>
   <script>
+    var passive = document.getElementById("passive");
+    var q = document.getElementById("q");
+    var w = document.getElementById("w");
+    var e = document.getElementById("e");
+    var r = document.getElementById("r");
+
+    passive.addEventListener("mouseout", clear);
+    q.addEventListener("mouseout", clear);
+    w.addEventListener("mouseout", clear);
+    e.addEventListener("mouseout", clear);
+    r.addEventListener("mouseout", clear);
+
     function printData(id) {
       var abilityDescr = document.getElementById("descr");
       var championName = document.getElementById("champ-name").innerText;
       var championNameFormatted = championName.replace(/\s/g, "").replace(/[^\w\s]/gi, "");
+      abilityDescr.style.display="block";
 
       fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championNameFormatted + '.json')
         .then(response => response.json())
@@ -163,7 +179,8 @@
     }
 
     function clear() {
-      document.getElementById("descr").innerHTML = "";
+      var abilityDescr = document.getElementById("descr");
+      abilityDescr.style.display="none";
     }
   </script>
 </body>

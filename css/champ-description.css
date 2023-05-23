@@ -50,9 +50,9 @@ body {
     background-color: #f2f2f2;
     border-radius: 5px;
   }
-  .stat h2 {
+  .stats h2 {
     font-size: 20px;
-    margin: 0;
+    color: #f2f2f2;
   }
   .stat p {
     font-size: 14px;
@@ -114,12 +114,16 @@ body {
     height: 100%;
   }
   #descr{
-    background-color: blue;
-    width: 1000px;
-    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    color: white;
+    width: 700px;
+    height: 370px;
     position:absolute;
-    border:rgb(11, 196, 226);
-    z-index: 3;
+    top: 500px;
+    right: 200px;
+    font-size: 200%;
+    display: none;
   }
 #info::-webkit-scrollbar {
     width: 10px; 
@@ -130,4 +134,49 @@ border-radius: 5px;
 }
 #info::-webkit-scrollbar-thumb:hover {
 background-color: #55555500; 
+}
+@media (max-width: 1300px) {
+  #info {
+    width: 90%;
+  }
+  .overlay {
+    width: 90%;
+  }
+  .stats {
+    width: 90%;
+    float: right;
+  }
+  footer {
+    float: right;
+  }
+
+  /* TODO */
+  #descr{
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    color: white;
+    width: 700px;
+    height: 370px;
+    position:absolute;
+    top: 500px;
+    right: 200px;
+    font-size: 200%;
+    display: none;
+  }
+  #right {
+    bottom: 20px;
+    height: 400px;
+    width: 50px;
+    display: block;
+  }
+  #passive, #q, #w, #e, #r {
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin-top: 10px;
+    border-radius:10px;
+    box-shadow: 10px 10px 5px black;
+    border:1px solid rgb(180, 173, 133);
+  }
+  /* TODO END */
 }
