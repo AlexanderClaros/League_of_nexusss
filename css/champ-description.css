@@ -12,6 +12,8 @@ body {
   height: 93%;
   text-align: center;
   position: fixed;
+  font-family: 'Courier New', Courier, monospace;
+  
 }
 .container {
   margin: 0 5%;
@@ -38,6 +40,12 @@ body {
     font-size: 150%;
     color: white;
   }
+  #champ-description{
+    text-align: justify;
+  }
+  #champ-title{
+    color:rgb(11, 196, 226);
+  }
   .stats {
     margin-top: 30px;
     width: 100%;
@@ -53,6 +61,7 @@ body {
   .stats h2 {
     font-size: 20px;
     color: #f2f2f2;
+    text-align: start;
   }
   .stat p {
     font-size: 14px;
@@ -68,7 +77,7 @@ body {
     z-index:-1;
     box-shadow: 20px -10px 10px rgba(0, 0, 0, 0.5);
   }
-  #passive, #q, #w, #e, #r {
+  #passive, #q, #w, #es, #r {
     width: 64px;
     height: 64px;
     float: right;
@@ -114,16 +123,21 @@ body {
     height: 100%;
   }
   #descr{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: -1;
     color: white;
     width: 700px;
-    height: 370px;
+    height: max-content;
     position:absolute;
     top: 500px;
     right: 200px;
-    font-size: 200%;
+    font-size: 20px;
     display: none;
+    border-radius: 10px;
+  }
+  #desc h2{
+    font-size: 50px;
+    color:rgb(82, 177, 191);
   }
 #info::-webkit-scrollbar {
     width: 10px; 
@@ -141,42 +155,54 @@ background-color: #55555500;
   }
   .overlay {
     width: 90%;
+    height: max-content;
   }
   .stats {
     width: 90%;
     float: right;
   }
-  footer {
-    float: right;
+  footer .container {
+    max-height:900px;
+    overflow: hidden;
+    
   }
+ footer{
+  float: right;
+ }
+ 
   footer .container section div div{
     justify-items: flex-end;
-    text-align: center;
   }
 
   /* TODO */
   #descr{
     z-index: 0;
     width: 400px;
-    height: auto;
+    height: max-content;
     position: relative;
     text-align: center;
   }
   #desc{
     position: absolute;
-    top: 10px;
+    top: 60px;
     left: 200px;
     width: 420px;
+    height: fit-content;
   }
   
   #right {
     float: right;
     position: relative;
     margin-top: 50px;
-    height: 400px;
+    height: max-content;
     width: 470px;
     margin-left: 20px;
     display: block;
+  }
+  #right:hover{
+    height: 600px;
+    align-items: center;
+    margin-left: 50px;
   }
   #passive, #q, #w, #e, #r {
     width: 64px;

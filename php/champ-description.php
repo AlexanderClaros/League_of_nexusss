@@ -86,47 +86,45 @@
           <div id="passive" onmouseover="printData(this.id)" onmouseout="clear()"></div>
           <div id="q" onmouseover="printData(this.id)" onmouseout="clear()"></div>
           <div id="w" onmouseover="printData(this.id)" onmouseout="clear()"></div>
-          <div id="e" onmouseover="printData(this.id)" onmouseout="clear()"></div>
+          <div id="es" onmouseover="printData(this.id)" onmouseout="clear()"></div>
           <div id="r" onmouseover="printData(this.id)" onmouseout="clear()"></div>
         </div>
         <footer class="text-center text-white " >
-        <div class="container">
-          <section class="mt-5">
-            <div class="row text-center d-flex justify-content-center pt-5">
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="./about_us.php" class="text-white">Sobre Nosotros</a>
-                </h6>
-              </div>
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="#!" class="text-white">Campeones</a>
-                </h6>
-              </div>
-              
-             
-              <div class="col-md-2">
-                <h6 class="text-uppercase font-weight-bold">
-                  <a href="https://support.riotgames.com/hc/es" class="text-white">Ayuda</a>
-                </h6>
-              </div>
-            </div>
-            <hr class="my-5" />
-            <section class="mb-5">
-              <div class="row d-flex justify-content-center">
-                <div class="col-lg-8">
-                  <p>
-                    League of Nexus fue creado según la política de la ''Sección de parloteo legal'' de Riot Games, utilizando los recursos de Riot Games.  Riot Games no apoya ni patrocina este proyecto.
-                  </p>
+          <div class="container">
+            <section class="mt-5">
+              <div class="row text-center d-flex justify-content-center pt-5">
+                <div class="col-md-2">
+                  <h6 class="text-uppercase font-weight-bold">
+                    <a href="./about_us.php" class="text-white">Sobre Nosotros</a>
+                  </h6>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-uppercase font-weight-bold">
+                    <a href="#!" class="text-white">Campeones</a>
+                  </h6>
+                </div>
+                <div class="col-md-2">
+                  <h6 class="text-uppercase font-weight-bold">
+                    <a href="https://support.riotgames.com/hc/es" class="text-white">Ayuda</a>
+                  </h6>
                 </div>
               </div>
-              <div class="text-center p-3"style="background-color: rgba(0, 0, 0, 0.2)">
-                © 2023 Copyright:
-                <a class="text-white" href="#">League of Nexus</a>
-              </div>
+              <hr class="my-5" />
+              <section class="mb-5">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-8">
+                    <p>
+                      League of Nexus fue creado según la política de la ''Sección de parloteo legal'' de Riot Games, utilizando los recursos de Riot Games.  Riot Games no apoya ni patrocina este proyecto.
+                    </p>
+                  </div>
+                </div>
+                <div class="text-center p-3"style="background-color: rgba(0, 0, 0, 0.2)">
+                  © 2023 Copyright:
+                  <a class="text-white" href="#">League of Nexus</a>
+                </div>
+              </section>
             </section>
-          </section>
-        </div>
+          </div>
           
       </footer>
     </div>
@@ -138,7 +136,7 @@
     var passive = document.getElementById("passive");
     var q = document.getElementById("q");
     var w = document.getElementById("w");
-    var e = document.getElementById("e");
+    var e = document.getElementById("es");
     var r = document.getElementById("r");
 
     passive.addEventListener("mouseout", clear);
@@ -160,17 +158,17 @@
           var champW = data.data[championName].spells[1];
           var champE = data.data[championName].spells[2];
           var champR = data.data[championName].spells[3];
-
+          console.log(champE.description);
           if (id == "q") {
-            abilityDesc.innerHTML = champQ.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = `<h2>`+champQ.name+`</h2>`+champQ.description.replace("\"", "");
           } else if (id == "w") {
-            abilityDesc.innerHTML = champW.description.replace(/<[^>]*>/g, "");
-          } else if (id == "e") {
-            abilityDescr.innerHTML = champE.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = `<h2>`+champW.name+`</h2>`+champW.description.replace("\"", "");
+          } else if (id == "es") {
+            abilityDesc.innerHTML = `<h2>`+champE.name+`</h2>`+champE.description.replace("\"", "");
           } else if (id == "r") {
-            abilityDesc.innerHTML = champR.description.replace(/<[^>]*>/g, "");
-          } else {
-            abilityDesc.innerHTML = champPassive.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = `<h2>`+champR.name+`</h2>`+champR.description.replace("\"", "");
+          } else if( id=='passive'){
+            abilityDesc.innerHTML = `<h2>`+champPassive.name+`</h2>`+champPassive.description.replace("\"", "");
           }
 
         })

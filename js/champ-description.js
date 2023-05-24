@@ -30,7 +30,6 @@ var championName ='';
 fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championName + '.json')
   .then(response => response.json())
   .then(data => {
-    console.log(data);
     var name = data.data[championName].name;
     var title = data.data[championName].title;
     var description = data.data[championName].blurb;
@@ -47,7 +46,7 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     var passive = document.getElementById("passive");
     var q = document.getElementById("q");
     var w = document.getElementById("w");
-    var e = document.getElementById("e");
+    var e = document.getElementById("es");
     var r = document.getElementById("r");
     var abilityDescr = document.getElementById("descr");
 
