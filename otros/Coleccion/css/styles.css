@@ -4,6 +4,7 @@
 body {
     margin: 0;
     padding: 0;
+    position: relative;
 }
 .letterTitle {
     
@@ -22,16 +23,79 @@ body {
     color: white;
 }
 .mainFrame {
-    border-top: none;
     padding: 30px;
-    overflow: auto;
 }
-.filter {
-    border-right: 1px solid #5B5A56;
+.sideLeft {
     float: left;
-    height: 300px;
     width: 20%;
+    padding: 10px;
 }
+.mastery {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border: 2px solid #C89B3C;
+    overflow: hidden;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%, 0% 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.mastery .totalPoints {
+    color: #785A28;
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+.mastery p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #C89B3C;
+    text-align: center;
+}
+
+
+
+.filter {
+    margin-top: 30px;
+}
+.orderCustom {
+    display: flex;
+    margin: 20px 0;
+    width: 100%; 
+}
+.orderCustom .option {
+    background-color: #C89B3C;
+    padding: 10px 20px;
+    margin: 1px;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+    z-index: 0;
+}
+.orderCustom .option:hover {
+    cursor: pointer;
+    background-color: #785A28;
+    color: white;
+}
+.orderCustom .firstOp {
+    border-radius: 10px 0 0 10px;
+}
+.orderCustom .lastOp {
+    border-radius: 0 10px 10px 0;
+}
+.orderCustom .selected {
+    background-color: #785A28;
+    z-index: 1;
+    transform: scale(1.1);
+    border: 1px solid black;
+    color: white;
+}
+
+
+
 .listCollection {
     float: right;
     height: 100%;
@@ -43,7 +107,7 @@ body {
 .champFrame {
     position: relative;
     overflow: hidden;
-    margin: 20px;
+    margin: 10px;
     width: 200px;
     clip-path: polygon(15% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 15%);
     transition: clip-path 0.3s;
@@ -53,13 +117,16 @@ body {
     clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%, 0% 0%);
 }
 .champFrame:hover img {
-transform: scale(1);
+    transform: scale(1);
 }
 .champFrame:hover .bannerMasteryChamp {
     height: 15%;
 }
 .champFrame:hover .pMasteryPoints {
     opacity: 1;
+}
+.champFrame:hover .bannerNameChamp p {
+    margin-left: 20px;
 }
 .champFrame img {
     transform: scale(1.10);
@@ -117,4 +184,5 @@ transform: scale(1);
     font-style: italic;
     font-size: 20px;
     max-width: 75%;
+    transition: margin-left 0.3s;
 }

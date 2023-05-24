@@ -11,7 +11,7 @@ export class Champ {
         this.setMastery(mastery);
     }
     setMastery(mastery){
-        if(mastery != undefined) {
+        if(mastery !== undefined) {
             this.mastery = mastery.championPoints;
             this.level = mastery.championLevel;
             this.chestGranted = mastery.chestGranted;
@@ -28,7 +28,7 @@ export class Champ {
             this.masteryIcon = null;
         }
         if (level>=4) {
-            this.masteryIcon = "./img/masteryIcon/mastery_icon_" + level + ".png";
+            this.masteryIcon = `./img/masteryIcon/mastery_icon_${level}.png`;
         }
     }
 }
