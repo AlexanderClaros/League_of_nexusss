@@ -133,6 +133,8 @@
   </div>
   <script src="../js/champ-description.js"></script>
   <script>
+    var champ = getCookie('campeon');
+
     var passive = document.getElementById("passive");
     var q = document.getElementById("q");
     var w = document.getElementById("w");
@@ -147,11 +149,9 @@
 
     function printData(id) {
       var abilityDescr = document.getElementById("descr");
-      var championName = document.getElementById("champ-name").innerText;
-      var championNameFormatted = championName.replace(/\s/g, "").replace(/[^\w\s]/gi, "");
       abilityDescr.style.display="block";
 
-      fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championNameFormatted + '.json')
+      fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + champ + '.json')
         .then(response => response.json())
         .then(data => {
           var champPassive = data.data[championName].passive;
