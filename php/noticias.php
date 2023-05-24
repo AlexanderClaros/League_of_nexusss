@@ -38,7 +38,7 @@
                 </form>
                 <?php if ( isset($_COOKIE['user']) ){?>
                   <?php $datos = unserialize($_COOKIE['user']);?>
-                  <a href="https://cybmeta.com/required-en-elementos-select" id='perfil'><p><?php echo($datos[0]);?></p><div id="icono-jugador"></div></a>
+                  <a href="perfil.php" id='perfil'><p><?php echo($datos[0]);?></p><div id="icono-jugador"></div></a>
                   <script> 
                     var numIcon =<?php echo($datos[1]); ?>;
                     var imagen = document.createElement("img");
