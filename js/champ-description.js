@@ -27,7 +27,7 @@ var championName ='';
 
 
 
-fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championName + '.json')
+fetch('https://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + championName + '.json')
   .then(response => response.json())
   .then(data => {
     var name = data.data[championName].name;
@@ -54,13 +54,13 @@ fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + cha
     champName.innerHTML = name;
     champTitle.innerHTML = title;
     champDescription.innerHTML = description;
-    body.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
+    body.style.backgroundImage= "url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
     //mainContainer.style.backgroundImage= "url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/" + championName + "_0.jpg')";
-    passive.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/" + champPassive.image.full + "')";
-    q.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champQ.image.full + "')";
-    w.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champW.image.full + "')";
-    e.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champE.image.full + "')";
-    r.style.backgroundImage="url('http://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champR.image.full + "')";
+    passive.style.backgroundImage="url('https://ddragon.leagueoflegends.com/cdn/13.9.1/img/passive/" + champPassive.image.full + "')";
+    q.style.backgroundImage="url('https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champQ.image.full + "')";
+    w.style.backgroundImage="url('https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champW.image.full + "')";
+    e.style.backgroundImage="url('https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champE.image.full + "')";
+    r.style.backgroundImage="url('https://ddragon.leagueoflegends.com/cdn/13.9.1/img/spell/" + champR.image.full + "')";
     
     var info = data.data[championName].info;
     var attack = info.attack;

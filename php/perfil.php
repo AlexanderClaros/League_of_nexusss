@@ -230,7 +230,7 @@
 				console.log(respuesta);
 				const numIcon = respuesta.profileIconId;
 				$(".profile-name").text(respuesta.name);
-				$(".profile-picture").html("<img src='http://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/" + numIcon + ".png'>");
+				$(".profile-picture").html("<img src='https://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/" + numIcon + ".png'>");
 				$(".profile-level").text("Nivel: " + respuesta.summonerLevel);
 
 			}

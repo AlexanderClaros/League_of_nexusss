@@ -68,7 +68,7 @@ function enviarMensaje(event) {
 }
 const listado=new Map()
 const api = new XMLHttpRequest();
-api.open('GET','http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json',true);
+api.open('GET','https://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json',true);
 api.send();
 
 api.onreadystatechange =function(){
@@ -103,15 +103,15 @@ function cambia(){
             var fila = document.createElement('div');
             fila.setAttribute('id','campeon_list_contain')
             var imagen = document.createElement('img');
-            var cuadro =`http://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/`+elemento.replace(' ','').replace('.','').replace('\'','')+`.png`;
-            imagen.setAttribute('src',`http://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/`+valor)
+            var cuadro =`https://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/`+elemento.replace(' ','').replace('.','').replace('\'','')+`.png`;
+            imagen.setAttribute('src',`https://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/`+valor)
             console.log(valor);
             var nombre = document.createElement('h3');
             nombre.innerText=elemento;
             fila.appendChild(imagen);
             fila.appendChild(nombre);
             contenedor.appendChild(fila);
-            fila.setAttribute('style',`background-image:url('http://ddragon.leagueoflegends.com/cdn/img/champion/splash/`+valor.replace('.png','')+`_0.jpg');border:1px solid white;`)
+            fila.setAttribute('style',`background-image:url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/`+valor.replace('.png','')+`_0.jpg');border:1px solid white;`)
             fila.setAttribute('onclick',`mostrar_descripcion(variable='`+valor.replace('.png','')+`')`);
         }
     }); 

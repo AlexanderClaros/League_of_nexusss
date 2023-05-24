@@ -1,5 +1,5 @@
 const api = new XMLHttpRequest();
-api.open('GET','http://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json',true);
+api.open('GET','https://ddragon.leagueoflegends.com/cdn/13.7.1/data/en_US/champion.json',true);
 api.send();
 console.log('entra');
 api.onreadystatechange =function(){
@@ -20,7 +20,7 @@ api.onreadystatechange =function(){
             console.log(listado);
             $(document).ready(function() {
                 $('body').css(
-                    'background-image','url('+`http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${listado[Math.floor(Math.random() * (listado.length- 0) + 0)]}_0.jpg`+')'
+                    'background-image','url('+`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${listado[Math.floor(Math.random() * (listado.length- 0) + 0)]}_0.jpg`+')'
                 );
             });
         

@@ -60,7 +60,7 @@
                   <script> 
                     var numIcon =<?php echo($datos[1]); ?>;
                     var imagen = document.createElement("img");
-                    imagen.setAttribute('src',`http://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/`+numIcon+`.png`)
+                    imagen.setAttribute('src',`https://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/`+numIcon+`.png`)
                     document.getElementById("icono-jugador").appendChild(imagen);
                   </script>
                 <?php } ?>

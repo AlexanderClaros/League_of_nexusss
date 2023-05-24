@@ -43,7 +43,7 @@
             <script> 
               var numIcon =<?php echo($datos[1]); ?>;
               var imagen = document.createElement("img");
-              imagen.setAttribute('src',`http://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/`+numIcon+`.png`)
+              imagen.setAttribute('src',`https://ddragon.leagueoflegends.com/cdn/13.10.1/img/profileicon/`+numIcon+`.png`)
               document.getElementById("icono-jugador").appendChild(imagen);
             </script>
           <?php } ?>
@@ -154,7 +154,7 @@
       containerDescr.style.display="block";
       var abilityDesc = document.getElementById("desc");
 
-      fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + champ + '.json')
+      fetch('https://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + champ + '.json')
         .then(response => response.json())
         .then(data => {
           var champPassive = data.data[championName].passive;
