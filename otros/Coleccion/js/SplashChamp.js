@@ -1,6 +1,7 @@
 export class SplashChamp extends HTMLElement{
     constructor(campeon){
         super();
+        this.campeon = campeon;
         this.setAttributes();
         this.setImage(campeon.id);
         this.setNombre(campeon.name);
@@ -11,7 +12,7 @@ export class SplashChamp extends HTMLElement{
     }
     setImage(id){
         let img = $("<img/>");
-        img.attr("src", "http://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + id + "_0.jpg");
+        img.attr("src", "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/" + id + "_0.jpg");
         $(this).append(img);
     }
     setNombre(name){
