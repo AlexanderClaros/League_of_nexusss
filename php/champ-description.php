@@ -64,18 +64,22 @@
           </div>
         </div>
         <div class="stats">
+          <img src="../media/imagenes/iconos/attack.png"></img>
           <h2>Ataque</h2>
           <div class="stat">
             <div id="attack"></div>
           </div>
+          <img src="../media/imagenes/iconos/deffense.png"></img>
           <h2>Defensa</h2>
           <div class="stat">
             <div id="defense"></div>
           </div>
+          <img src="../media/imagenes/iconos/mage.png"></img>
           <h2>Magia</h2>
           <div class="stat">
             <div id="mage"></div>
           </div>
+          <img src="../media/imagenes/iconos/diff.png"></img>
           <h2>Dificultad</h2>
           <div class="stat">
             <div id="difficulty"></div>

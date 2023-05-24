@@ -139,6 +139,14 @@ body {
     font-size: 50px;
     color:rgb(82, 177, 191);
   }
+  .stats img {
+    display: inline;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    float: left;
+  }
+
 #info::-webkit-scrollbar {
     width: 10px; 
   }
