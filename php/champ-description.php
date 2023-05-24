@@ -81,7 +81,7 @@
             <div id="difficulty"></div>
           </div>
         </div>
-        <div id="descr"></div>
+        <div id="descr"><p id="desc"></p></div>
         <div class="container" id="right">
           <div id="passive" onmouseover="printData(this.id)" onmouseout="clear()"></div>
           <div id="q" onmouseover="printData(this.id)" onmouseout="clear()"></div>
@@ -148,8 +148,9 @@
     r.addEventListener("mouseout", clear);
 
     function printData(id) {
-      var abilityDescr = document.getElementById("descr");
-      abilityDescr.style.display="block";
+      var containerDescr = document.getElementById("descr");
+      containerDescr.style.display="block";
+      var abilityDesc = document.getElementById("desc");
 
       fetch('http://ddragon.leagueoflegends.com/cdn/13.9.1/data/es_ES/champion/' + champ + '.json')
         .then(response => response.json())
@@ -161,15 +162,15 @@
           var champR = data.data[championName].spells[3];
 
           if (id == "q") {
-            abilityDescr.innerHTML = champQ.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = champQ.description.replace(/<[^>]*>/g, "");
           } else if (id == "w") {
-            abilityDescr.innerHTML = champW.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = champW.description.replace(/<[^>]*>/g, "");
           } else if (id == "e") {
             abilityDescr.innerHTML = champE.description.replace(/<[^>]*>/g, "");
           } else if (id == "r") {
-            abilityDescr.innerHTML = champR.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = champR.description.replace(/<[^>]*>/g, "");
           } else {
-            abilityDescr.innerHTML = champPassive.description.replace(/<[^>]*>/g, "");
+            abilityDesc.innerHTML = champPassive.description.replace(/<[^>]*>/g, "");
           }
 
         })
@@ -179,8 +180,8 @@
     }
 
     function clear() {
-      var abilityDescr = document.getElementById("descr");
-      abilityDescr.style.display="none";
+      var containerDescr = document.getElementById("descr");
+      containerDescr.style.display="none";
     }
   </script>
 </body>
